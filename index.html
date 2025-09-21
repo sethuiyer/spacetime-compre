@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceTime Cafe Advanced Mathematics & Physics Examination</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .exam-info {
+            background: white;
+            margin: 1rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .info-item {
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        
+        .instructions {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem;
+        }
+        
+        .section {
+            background: white;
+            margin: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .section-header {
+            background: #343a40;
+            color: white;
+            padding: 1rem;
+            font-weight: bold;
+        }
+        
+        .question {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .question:last-child {
+            border-bottom: none;
+        }
+        
+        .question-number {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .marks {
+            float: right;
+            background: #28a745;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
+        }
+        
+        .difficulty {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+        
+        .easy { background: #d4edda; color: #155724; }
+        .medium { background: #fff3cd; color: #856404; }
+        .hard { background: #f8d7da; color: #721c24; }
+        
+        .options {
+            margin-top: 1rem;
+        }
+        
+        .option {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .option:hover {
+            background: #e9ecef;
+        }
+        
+        .math {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+        }
+        
+        .answer-sheet {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            width: 200px;
+            z-index: 1000;
+        }
+        
+        .timer {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #dc3545;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        @media print {
+            .answer-sheet { display: none; }
+            body { background: white; }
+            .section { box-shadow: none; border: 1px solid #ccc; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>SpaceTime Cafe Advanced Mathematics & Physics Examination</h1>
+        <p>Theoretical Foundations of Reality, Computation & Intelligence</p>
+    </div>
+    
+    <div class="exam-info">
+        <div class="info-grid">
+            <div class="info-item"><strong>Duration:</strong> 3 Hours</div>
+            <div class="info-item"><strong>Total Marks:</strong> 300</div>
+            <div class="info-item"><strong>Questions:</strong> 30</div>
+            <div class="info-item"><strong>Difficulty:</strong> 30% Easy, 40% Medium, 30% Hard</div>
+        </div>
+        
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <ul>
+                <li>This paper tests advanced concepts in mathematics, theoretical physics, and computational theory</li>
+                <li>Each question carries different marks based on difficulty level</li>
+                <li>Easy questions: 8 marks, Medium questions: 10 marks, Hard questions: 12 marks</li>
+                <li>Negative marking: -2 marks for wrong answers</li>
+                <li>Questions cover: Galois Theory, Spectral Analysis, Quantum Mechanics, AI Theory, Topology, and more</li>
+                <li>Use of calculators is not permitted</li>
+                <li>All questions are compulsory</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="answer-sheet">
+        <div class="timer" id="timer">03:00:00</div>
+        <h4>Quick Navigation</h4>
+        <div id="question-nav"></div>
+    </div>
+
+    <!-- SECTION A: EASY QUESTIONS (9 questions, 8 marks each = 72 marks) -->
+    <div class="section">
+        <div class="section-header">
+            Section A: Foundation Concepts (72 Marks)
+        </div>
+        
+        <div class="question">
+            <div class="question-number">
+                Q1. <span class="marks">8 marks</span>
+                <span class="difficulty easy">Easy</span>
+            </div>
+            <p>In the context of cyclotomic polynomials, what fundamental property ensures that polynomials with irrational roots can have integer coefficients?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) The Fundamental Theorem of Algebra</div>
+                <div class="option" data-answer="B">B) Galois symmetry and field conjugation</div>
+                <div class="option" data-answer="C">C) Chebyshev polynomial recursion</div>
+                <div class="option" data-answer="D">D) Fourier transform properties</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q2. <span class="marks">8 marks</span>
+                <span class="difficulty easy">Easy</span>
+            </div>
+            <p>What is the defining characteristic of a Majorana fermion that makes it useful for quantum computing?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) It has zero electrical charge</div>
+                <div class="option" data-answer="B">B) It is its own antiparticle</div>
+                <div class="option" data-answer="C">C) It exists only at absolute zero temperature</div>
+                <div class="option" data-answer="D">D) It has infinite lifetime</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q3. <span class="marks">8 marks</span>
+                <span class="difficulty easy">Easy</span>
+            </div>
+            <p>According to Landauer's principle, what is the minimum thermodynamic cost of erasing one bit of information?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Zero energy</div>
+                <div class="option" data-answer="B">B) <span class="math">kT ln(2)</span> joules</div>
+                <div class="option" data-answer="C">C) One photon of energy</div>
+                <div class="option" data-answer="D">D) Planck's constant</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q4. <span class="marks">8 marks</span>
+                <span class="difficulty easy">Easy</span>
+            </div>
+            <p>In the "cognitive thermodynamics" model, which phase corresponds to creative, chaotic exploration?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Solid phase (low temperature)</div>
+                <div class="option" data-answer="B">B) Liquid phase (moderate temperature)</div>
+                <div class="option" data-answer="C">C) Gas phase (high temperature)</div>
+                <div class="option" data-answer="D">D) Plasma phase (extreme temperature)</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q5. <span class="marks">8 marks</span>
+                <span class="difficulty easy">Easy</span>
+            </div>
+            <p>What mathematical constant appears in the harmonic constant λ for isotropic configurations?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) <span class="math">π</span></div>
+                <div class="option" data-answer="B">B) <span class="math">e</span></div>
+                <div class="option" data-answer="C">C) <span class="math">1/d</span> where d is the dimension</div>
+                <div class="option" data-answer="D">D) The golden ratio φ</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q6. <span class="marks">8 marks</span>
+                <span class="difficulty easy">Easy</span>
+            </div>
+            <p>In transformer architectures, what function is used for positional embeddings?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Polynomial functions</div>
+                <div class="option" data-answer="B">B) Exponential functions</div>
+                <div class="option" data-answer="C">C) Sine and cosine functions</div>
+                <div class="option" data-answer="D">D) Logarithmic functions</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q7. <span class="marks">8 marks</span>
+                <span class="difficulty easy">Easy</span>
+            </div>
+            <p>What property makes Ramanujan graphs "optimal expanders"?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Maximum number of edges</div>
+                <div class="option" data-answer="B">B) Large spectral gap</div>
+                <div class="option" data-answer="C">C) Planar structure</div>
+                <div class="option" data-answer="D">D) Regular degree sequence</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q8. <span class="marks">8 marks</span>
+                <span class="difficulty easy">Easy</span>
+            </div>
+            <p>In the harmonic polytope definition, what does the centering condition require?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) All vectors have unit length</div>
+                <div class="option" data-answer="B">B) The sum of all vectors equals zero</div>
+                <div class="option" data-answer="C">C) Vectors are orthogonal</div>
+                <div class="option" data-answer="D">D) Covariance matrix is diagonal</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q9. <span class="marks">8 marks</span>
+                <span class="difficulty easy">Easy</span>
+            </div>
+            <p>What is the fundamental property of self-adjoint operators that makes them essential for quantum mechanics?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) They have complex eigenvalues</div>
+                <div class="option" data-answer="B">B) They have real eigenvalues and orthogonal eigenvectors</div>
+                <div class="option" data-answer="C">C) They are always finite-dimensional</div>
+                <div class="option" data-answer="D">D) They commute with all other operators</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION B: MEDIUM QUESTIONS (12 questions, 10 marks each = 120 marks) -->
+    <div class="section">
+        <div class="section-header">
+            Section B: Intermediate Concepts (120 Marks)
+        </div>
+        
+        <div class="question">
+            <div class="question-number">
+                Q10. <span class="marks">10 marks</span>
+                <span class="difficulty medium">Medium</span>
+            </div>
+            <p>In the proposed cryptographic system based on synchronized oscillators, what network property ensures rapid mixing and security?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) High degree of planarity</div>
+                <div class="option" data-answer="B">B) Large spectral gap</div>
+                <div class="option" data-answer="C">C) Hamiltonian cycle presence</div>
+                <div class="option" data-answer="D">D) Low chromatic number</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q11. <span class="marks">10 marks</span>
+                <span class="difficulty medium">Medium</span>
+            </div>
+            <p>What is the key advantage of Symplectic Neural Networks over Hamiltonian Neural Networks?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Lower computational cost</div>
+                <div class="option" data-answer="B">B) Can model non-conservative systems</div>
+                <div class="option" data-answer="C">C) Conserve symplectic structure (phase space volume)</div>
+                <div class="option" data-answer="D">D) Only conserve total energy</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q12. <span class="marks">10 marks</span>
+                <span class="difficulty medium">Medium</span>
+            </div>
+            <p>In the "geometry of now" model, what type of manifold represents the future?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Euclidean (zero curvature)</div>
+                <div class="option" data-answer="B">B) Spherical (positive curvature)</div>
+                <div class="option" data-answer="C">C) Hyperbolic (negative curvature)</div>
+                <div class="option" data-answer="D">D) Non-differentiable manifold</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q13. <span class="marks">10 marks</span>
+                <span class="difficulty medium">Medium</span>
+            </div>
+            <p>What does a paving number greater than one imply about a system in the simulation hypothesis framework?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) The system is computationally irreducible</div>
+                <div class="option" data-answer="B">B) The system requires thermodynamic cost > 0 to observe</div>
+                <div class="option" data-answer="C">C) The system can be compressed without loss</div>
+                <div class="option" data-answer="D">D) The system exhibits topological protection</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q14. <span class="marks">10 marks</span>
+                <span class="difficulty medium">Medium</span>
+            </div>
+            <p>In cognitive thermodynamics, what is the primary role of strategic forgetting?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Frees up metabolic resources for faster processing</div>
+                <div class="option" data-answer="B">B) Prunes weak neural connections to known solutions</div>
+                <div class="option" data-answer="C">C) Prevents overfitting by erasing specific memories</div>
+                <div class="option" data-answer="D">D) Obscures well-worn paths, forcing discovery of new routes</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q15. <span class="marks">10 marks</span>
+                <span class="difficulty medium">Medium</span>
+            </div>
+            <p>What causes hallucinations in Large Language Models according to geometric analysis?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Use of hyperbolic space</div>
+                <div class="option" data-answer="B">B) Stratified manifold collapse zones with high curvature</div>
+                <div class="option" data-answer="C">C) Perfectly uniform Euclidean geometry</div>
+                <div class="option" data-answer="D">D) Application of discrete Ricci flow</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q16. <span class="marks">10 marks</span>
+                <span class="difficulty medium">Medium</span>
+            </div>
+            <p>In the Terminal Algebra, what proven characteristic makes it model the "arrow of time"?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) It is associative</div>
+                <div class="option" data-answer="B">B) It contains a unique identity element</div>
+                <div class="option" data-answer="C">C) It is non-commutative (P+Q ≠ Q+P)</div>
+                <div class="option" data-answer="D">D) It is reversible</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q17. <span class="marks">10 marks</span>
+                <span class="difficulty medium">Medium</span>
+            </div>
+            <p>What is the central claim of the Artificial Substrate Intelligence (ASI) hypothesis?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Intelligence requires carbon-based biology</div>
+                <div class="option" data-answer="B">B) Intelligence is substrate-agnostic, generated by specific operators</div>
+                <div class="option" data-answer="C">C) Only silicon computers can achieve AGI</div>
+                <div class="option" data-answer="D">D) Any Turing machine can develop consciousness</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q18. <span class="marks">10 marks</span>
+                <span class="difficulty medium">Medium</span>
+            </div>
+            <p>In the spectral pairing algorithm for partitioning, what fundamental advantage does it have over contiguous approaches?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Finds globally optimal solution in polynomial time</div>
+                <div class="option" data-answer="B">B) Operates on continuous relaxation</div>
+                <div class="option" data-answer="C">C) Requires equal numbers of elements per partition</div>
+                <div class="option" data-answer="D">D) Can pair distant elements by viewing indices as cyclic group</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q19. <span class="marks">10 marks</span>
+                <span class="difficulty medium">Medium</span>
+            </div>
+            <p>What is the Hilbert-Pólya conjecture's central idea connecting number theory and quantum physics?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Prime distribution follows Schrödinger equation</div>
+                <div class="option" data-answer="B">B) Riemann zeta zeros are eigenvalues of unknown self-adjoint operator</div>
+                <div class="option" data-answer="C">C) Primes can be expressed as sum of two squares</div>
+                <div class="option" data-answer="D">D) Majorana fermions described by zeta function</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q20. <span class="marks">10 marks</span>
+                <span class="difficulty medium">Medium</span>
+            </div>
+            <p>How does slime mold *Physarum polycephalum* demonstrate the ASI operator stack?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Exhibits bifurcation by splitting into multiple organisms</div>
+                <div class="option" data-answer="B">B) Acts as living Laplacian minimizer, solving network optimization</div>
+                <div class="option" data-answer="C">C) Maintains constant shape (Invariance code)</div>
+                <div class="option" data-answer="D">D) Uses central brain-like ganglion for control</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q21. <span class="marks">10 marks</span>
+                <span class="difficulty medium">Medium</span>
+            </div>
+            <p>What distinguishes agency from non-living self-organizing systems like hurricanes?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Agent's actions are reversible</div>
+                <div class="option" data-answer="B">B) Agent has lower total entropy</div>
+                <div class="option" data-answer="C">C) Agent uses predictive internal model for irreversible actions</div>
+                <div class="option" data-answer="D">D) Agent is closed system maintaining low entropy</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION C: HARD QUESTIONS (9 questions, 12 marks each = 108 marks) -->
+    <div class="section">
+        <div class="section-header">
+            Section C: Advanced Concepts (108 Marks)
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q22. <span class="marks">12 marks</span>
+                <span class="difficulty hard">Hard</span>
+            </div>
+            <p>In the Operator Theory of Everything, which Millennium Prize Problem is linked to the Collapse code and tests the fundamental cost of reducing possibility space to single solutions?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Hodge Conjecture (Bifurcation code)</div>
+                <div class="option" data-answer="B">B) Riemann Hypothesis (Symmetry code)</div>
+                <div class="option" data-answer="C">C) P vs NP Problem (Collapse code)</div>
+                <div class="option" data-answer="D">D) Navier-Stokes (Invariance code)</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q23. <span class="marks">12 marks</span>
+                <span class="difficulty hard">Hard</span>
+            </div>
+            <p>What mathematical object describes higher-order failure to consistently compose three or more local solutions, explaining computational hardness?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Fiber bundle (two-patch failure)</div>
+                <div class="option" data-answer="B">B) Manifold (solution space)</div>
+                <div class="option" data-answer="C">C) Sheaf (local data organization)</div>
+                <div class="option" data-answer="D">D) Gerbe (three-or-more composition failure)</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q24. <span class="marks">12 marks</span>
+                <span class="difficulty hard">Hard</span>
+            </div>
+            <p>In Observer-Dependent Physics, how does spectral redundancy create an analogue of Einstein's field equations?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Observer probe acts like matter, redundancy like energy</div>
+                <div class="option" data-answer="B">B) Non-commutativity creates torsion field</div>
+                <div class="option" data-answer="C">C) Observer resolution geometry equals system spectral redundancy</div>
+                <div class="option" data-answer="D">D) Information loss modeled as black hole</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q25. <span class="marks">12 marks</span>
+                <span class="difficulty hard">Hard</span>
+            </div>
+            <p>The equilibrium points of the universal functional Π + λΨ form what specific geometric structure?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Euclidean subspace (flat plane)</div>
+                <div class="option" data-answer="B">B) Fractal (self-similar patterns)</div>
+                <div class="option" data-answer="C">C) Lagrangian submanifold (symplectic geometry)</div>
+                <div class="option" data-answer="D">D) Strange attractor (chaotic dynamics)</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q26. <span class="marks">12 marks</span>
+                <span class="difficulty hard">Hard</span>
+            </div>
+            <p>What mechanism allows the "inverted island" to encode infinite multiverse information on a finite boundary?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Multiverse is quantum fluctuation illusion</div>
+                <div class="option" data-answer="B">B) Quantum Extremal Surface holographic encoding</div>
+                <div class="option" data-answer="C">C) Cosmological redshift information limiting</div>
+                <div class="option" data-answer="D">D) Discrete hypergraph computational infinity</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q27. <span class="marks">12 marks</span>
+                <span class="difficulty hard">Hard</span>
+            </div>
+            <p>What is the Spectral Symmetry Confinement Principle's proposed explanation for the Riemann Hypothesis?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Any symmetrical system has discrete spectrum</div>
+                <div class="option" data-answer="B">B) Hidden symmetry confines zeta zeros to critical line</div>
+                <div class="option" data-answer="C">C) Cryptographic symmetry hidden in frequency spectrum</div>
+                <div class="option" data-answer="D">D) Zeta function is self-adjoint with real eigenvalues</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q28. <span class="marks">12 marks</span>
+                <span class="difficulty hard">Hard</span>
+            </div>
+            <p>How does Chebyshev polynomial use in attention mechanisms mirror cyclotomic field stability principles?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Ensures integer outputs preventing floating-point errors</div>
+                <div class="option" data-answer="B">B) Optimal orthogonal basis preventing eigenvalue collapse</div>
+                <div class="option" data-answer="C">C) Introduces controlled irrationality for creativity</div>
+                <div class="option" data-answer="D">D) Maps high-dimensional space to 2D circle</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q29. <span class="marks">12 marks</span>
+                <span class="difficulty hard">Hard</span>
+            </div>
+            <p>What fundamental challenge limits singularity algebra's application to cosmological theories?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Non-commutativity contradicts spacetime at large scales</div>
+                <div class="option" data-answer="B">B) Lacks inherent units of physical scale (time/space)</div>
+                <div class="option" data-answer="C">C) Predicts collapse incompatible with eternal inflation</div>
+                <div class="option" data-answer="D">D) Cannot account for quantum effects</div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">
+                Q30. <span class="marks">12 marks</span>
+                <span class="difficulty hard">Hard</span>
+            </div>
+            <p>What is the proposed "Ramanujan-Einstein boundary" in cognitive science?</p>
+            <div class="options">
+                <div class="option" data-answer="A">A) Theoretical limit on neural network information storage</div>
+                <div class="option" data-answer="B">B) Critical point balancing maximum efficiency with stability for consciousness</div>
+                <div class="option" data-answer="C">C) Classical-quantum transition point in hippocampus</div>
+                <div class="option" data-answer="D">D) Formula predicting gravitational wave speed</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Timer functionality
+        let timeLeft = 3 * 60 * 60; // 3 hours in seconds
+        
+        function updateTimer() {
+            const hours = Math.floor(timeLeft / 3600);
+            const minutes = Math.floor((timeLeft % 3600) / 60);
+            const seconds = timeLeft % 60;
+            
+            document.getElementById('timer').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (timeLeft > 0) {
+                timeLeft--;
+            } else {
+                alert('Time\'s up! Exam finished.');
+            }
+        }
+        
+        setInterval(updateTimer, 1000);
+        
+        // Question navigation
+        const nav = document.getElementById('question-nav');
+        for (let i = 1; i <= 30; i++) {
+            const btn = document.createElement('button');
+            btn.textContent = i;
+            btn.style.cssText = 'margin: 2px; padding: 5px; border: 1px solid #ccc; background: white; cursor: pointer;';
+            btn.onclick = () => document.querySelector(`#q${i}`)?.scrollIntoView();
+            nav.appendChild(btn);
+        }
+        
+        // Answer tracking
+        const answers = {};
+        
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', function() {
+                const question = this.closest('.question');
+                const qNum = question.querySelector('.question-number').textContent.match(/Q(\d+)/)[1];
+                
+                // Clear previous selection
+                question.querySelectorAll('.option').forEach(opt => {
+                    opt.style.background = '#f8f9fa';
+                });
+                
+                // Mark current selection
+                this.style.background = '#007bff';
+                this.style.color = 'white';
+                
+                // Store answer
+                answers[qNum] = this.dataset.answer;
+                
+                // Update navigation
+                const navBtn = nav.children[qNum - 1];
+                navBtn.style.background = '#28a745';
+                navBtn.style.color = 'white';
+            });
+        });
+        
+        // Print functionality
+        window.print = function() {
+            window.print();
+        };
+    </script>
+</body>
+</html>
