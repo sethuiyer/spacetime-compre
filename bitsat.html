@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceTime Cafe BITSAT: Complete Theory of Everything Assessment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .exam-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .exam-title {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .exam-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        
+        .exam-info {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-bottom: 2px solid #dee2e6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .info-item {
+            margin: 0.25rem;
+            padding: 0.5rem 1rem;
+            background: white;
+            border-radius: 20px;
+            border: 1px solid #dee2e6;
+            font-weight: bold;
+        }
+        
+        .timer {
+            font-size: 1.2rem;
+            color: #dc3545;
+            font-weight: bold;
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 2px solid #dc3545;
+        }
+        
+        .timer.warning {
+            animation: pulse 1s infinite;
+            background: #f8d7da;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .section {
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .section-header {
+            background: linear-gradient(135deg, #495057 0%, #6c757d 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .question {
+            padding: 1.5rem;
+            border-bottom: 1px solid #f1f3f4;
+            transition: background 0.2s;
+        }
+        
+        .question:hover {
+            background: #fafbfc;
+        }
+        
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .question-number {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1rem;
+        }
+        
+        .marks {
+            background: #28a745;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .difficulty {
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .easy { background: #d4edda; color: #155724; }
+        .medium { background: #fff3cd; color: #856404; }
+        .hard { background: #f8d7da; color: #721c24; }
+        .nightmare { background: #343a40; color: white; }
+        
+        .question-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .options {
+            margin-top: 1rem;
+        }
+        
+        .option {
+            margin: 0.5rem 0;
+            padding: 0.75rem;
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+        }
+        
+        .option:hover {
+            background: #e9ecef;
+            border-color: #667eea;
+            transform: translateX(3px);
+        }
+        
+        .option.selected {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #667eea;
+            box-shadow: 0 4px 8px rgba(102,126,234,0.3);
+        }
+        
+        .math {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            font-weight: bold;
+            color: #764ba2;
+        }
+        
+        .sidebar {
+            position: fixed;
+            top: 120px;
+            right: 20px;
+            width: 250px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            padding: 1rem;
+            z-index: 1000;
+            max-height: calc(100vh - 140px);
+            overflow-y: auto;
+        }
+        
+        .progress-section {
+            margin-bottom: 1rem;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #dee2e6;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 0.5rem 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #28a745, #20c997);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 3px;
+            margin-top: 0.5rem;
+        }
+        
+        .nav-btn {
+            padding: 6px;
+            border: 1px solid #ccc;
+            background: white;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        
+        .nav-btn:hover {
+            background: #f8f9fa;
+        }
+        
+        .nav-btn.answered {
+            background: #28a745;
+            color: white;
+            border-color: #28a745;
+        }
+        
+        .nav-btn.current {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .nav-btn.flagged {
+            background: #ffc107;
+            color: #212529;
+            border-color: #ffc107;
+        }
+        
+        .stats {
+            font-size: 0.9rem;
+            color: #6c757d;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+        
+        .section-progress {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .controls {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-warning {
+            background: #ffc107;
+            color: #212529;
+        }
+        
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                position: relative;
+                top: auto;
+                right: auto;
+                width: 100%;
+                margin: 1rem;
+            }
+            
+            .exam-info {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .info-item {
+                margin: 0.25rem 0;
+                text-align: center;
+            }
+        }
+        
+        .warning-banner {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+            animation: flash 2s infinite;
+        }
+        
+        @keyframes flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        .domain-tag {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            margin: 0.2rem;
+            font-weight: bold;
+        }
+        
+        .galois { background: #e1f5fe; color: #01579b; }
+        .quantum { background: #f3e5f5; color: #4a148c; }
+        .spectral { background: #e8f5e8; color: #1b5e20; }
+        .topology { background: #fff3e0; color: #e65100; }
+        .ai { background: #fce4ec; color: #880e4f; }
+        .complexity { background: #f1f8e9; color: #33691e; }
+        .geometry { background: #e0f2f1; color: #004d40; }
+        .info-theory { background: #e8eaf6; color: #1a237e; }
+    </style>
+</head>
+<body>
+    <div class="warning-banner">
+        ⚠️ WARNING: This examination covers 42 episodes of advanced theoretical content. Estimated difficulty: PhD+ level across 8 domains ⚠️
+    </div>
+    
+    <div class="exam-container">
+        <div class="header">
+            <div class="exam-title">SpaceTime Cafe BITSAT</div>
+            <div class="exam-subtitle">Complete Theory of Everything Assessment • 85 Questions • 4 Hours</div>
+        </div>
+        
+        <div class="exam-info">
+            <div class="info-item">Duration: 4 Hours</div>
+            <div class="info-item">Questions: 85</div>
+            <div class="info-item">Total Marks: 340</div>
+            <div class="info-item">Negative: -1 mark</div>
+            <div class="timer" id="timer">04:00:00</div>
+        </div>
+        
+        <div class="sidebar">
+            <div class="progress-section">
+                <h4>Overall Progress</h4>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="overall-progress"></div>
+                </div>
+                <div class="stats" id="progress-stats">0/85 answered</div>
+            </div>
+            
+            <div class="section-progress">
+                <strong>Section Progress:</strong>
+                <div id="section-stats"></div>
+            </div>
+            
+            <h4>Question Navigation</h4>
+            <div class="question-grid" id="question-nav"></div>
+            
+            <div class="controls">
+                <button class="btn btn-warning" onclick="flagQuestion()">Flag Question</button>
+                <button class="btn btn-primary" onclick="reviewAnswers()">Review</button>
+                <button class="btn btn-danger" onclick="submitExam()">Submit</button>
+            </div>
+        </div>
+
+        <!-- SECTION 1: MATHEMATICAL FOUNDATIONS (25 questions) -->
+        <div class="section">
+            <div class="section-header">
+                Section 1: Mathematical Foundations (100 marks)
+            </div>
+            
+            <div class="question" id="q1">
+                <div class="question-header">
+                    <div class="question-number">Q1. <span class="marks">4 marks</span></div>
+                    <div>
+                        <span class="difficulty easy">Easy</span>
+                        <span class="domain-tag galois">Galois Theory</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    In cyclotomic fields Q(ζₙ), what fundamental property ensures that elementary symmetric polynomials in the roots of unity yield integer coefficients?
+                </div>
+                <div class="options">
+                    <div class="option" data-answer="A">A) Fundamental Theorem of Algebra</div>
+                    <div class="option" data-answer="B">B) Galois group action preserves rational numbers</div>
+                    <div class="option" data-answer="C">C) Chebyshev polynomial recursion</div>
+                    <div class="option" data-answer="D">D) Discrete Fourier Transform properties</div>
+                </div>
+            </div>
+
+            <div class="question" id="q2">
+                <div class="question-header">
+                    <div class="question-number">Q2. <span class="marks">4 marks</span></div>
+                    <div>
+                        <span class="difficulty easy">Easy</span>
+                        <span class="domain-tag quantum">Quantum</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    What unique property makes Majorana Zero Modes (MZMs) exceptionally stable for quantum computing applications?
+                </div>
+                <div class="options">
+                    <div class="option" data-answer="A">A) Zero electrical charge</div>
+                    <div class="option" data-answer="B">B) Topological protection from local disturbances</div>
+                    <div class="option" data-answer="C">C) Existence only at absolute zero</div>
+                    <div class="option" data-answer="D">D) Infinite coherence time</div>
+                </div>
+            </div>
+
+            <div class="question" id="q3">
+                <div class="question-header">
+                    <div class="question-number">Q3. <span class="marks">4 marks</span></div>
+                    <div>
+                        <span class="difficulty easy">Easy</span>
+                        <span class="domain-tag info-theory">Information</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    According to Landauer's principle, what is the minimum thermodynamic cost of erasing one bit of information?
+                </div>
+                <div class="options">
+                    <div class="option" data-answer="A">A) Zero energy</div>
+                    <div class="option" data-answer="B">B) <span class="math">kT ln(2)</span> joules</div>
+                    <div class="option" data-answer="C">C) One photon energy</div>
+                    <div class="option" data-answer="D">D) Planck constant ℏ</div>
+                </div>
+            </div>
+
+            <div class="question" id="q4">
+                <div class="question-header">
+                    <div class="question-number">Q4. <span class="marks">4 marks</span></div>
+                    <div>
+                        <span class="difficulty easy">Easy</span>
+                        <span class="domain-tag spectral">Spectral</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    In harmonic polytope theory, what value does the harmonic constant λ take for isotropic configurations?
+                </div>
+                <div class="options">
+                    <div class="option" data-answer="A">A) π</div>
+                    <div class="option" data-answer="B">B) e</div>
+                    <div class="option" data-answer="C">C) 1/d (where d is dimension)</div>
+                    <div class="option" data-answer="D">D) Golden ratio φ</div>
+                </div>
+            </div>
+
+            <div class="question" id="q5">
+                <div class="question-header">
+                    <div class="question-number">Q5. <span class="marks">4 marks</span></div>
+                    <div>
+                        <span class="difficulty easy">Easy</span>
+                        <span class="domain-tag ai">AI Theory</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    What mathematical functions are used for positional embeddings in transformer architectures?
+                </div>
+                <div class="options">
+                    <div class="option" data-answer="A">A) Polynomial functions</div>
+                    <div class="option" data-answer="B">B) Exponential functions</div>
+                    <div class="option" data-answer="C">C) Sinusoidal functions (sin/cos)</div>
+                    <div class="option" data-answer="D">D) Logarithmic functions</div>
+                </div>
+            </div>
+
+            <div class="question" id="q6">
+                <div class="question-header">
+                    <div class="question-number">Q6. <span class="marks">4 marks</span></div>
+                    <div>
+                        <span class="difficulty medium">Medium</span>
+                        <span class="domain-tag spectral">Spectral</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    What property makes Ramanujan graphs "optimal expanders" in network theory?
+                </div>
+                <div class="options">
+                    <div class="option" data-answer="A">A) Maximum edge density</div>
+                    <div class="option" data-answer="B">B) Large spectral gap with minimal connectivity</div>
+                    <div class="option" data-answer="C">C) Perfect planarity</div>
+                    <div class="option" data-answer="D">D) Regular degree sequence</div>
+                </div>
+            </div>
+
+            <div class="question" id="q7">
+                <div class="question-header">
+                    <div class="question-number">Q7. <span class="marks">4 marks</span></div>
+                    <div>
+                        <span class="difficulty easy">Easy</span>
+                        <span class="domain-tag geometry">Geometry</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    In the harmonic polytope definition, what does the centering condition require?
+                </div>
+                <div class="options">
+                    <div class="option" data-answer="A">A) All vectors have unit length</div>
+                    <div class="option" data-answer="B">B) Sum of all vectors equals zero</div>
+                    <div class="option" data-answer="C">C) Vectors are mutually orthogonal</div>
+                    <div class="option" data-answer="D">D) Covariance matrix is diagonal</div>
+                </div>
+            </div>
+
+            <div class="question" id="q8">
+                <div class="question-header">
+                    <div class="question-number">Q8. <span class="marks">4 marks</span></div>
+                    <div>
+                        <span class="difficulty easy">Easy</span>
+                        <span class="domain-tag quantum">Quantum</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    What fundamental property distinguishes self-adjoint operators in quantum mechanics?
+                </div>
+                <div class="options">
+                    <div class="option" data-answer="A">A) Complex eigenvalues</div>
+                    <div class="option" data-answer="B">B) Real eigenvalues and orthogonal eigenvectors</div>
+                    <div class="option" data-answer="C">C) Finite dimensionality</div>
+                    <div class="option" data-answer="D">D) Commutation with all operators</div>
+                </div>
+            </div>
+
+            <div class="question" id="q9">
+                <div class="question-header">
+                    <div class="question-number">Q9. <span class="marks">4 marks</span></div>
+                    <div>
+                        <span class="difficulty medium">Medium</span>
+                        <span class="domain-tag ai">AI Theory</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    In cognitive thermodynamics, which phase corresponds to maximum creativity and chaotic exploration?
+                </div>
+                <div class="options">
+                    <div class="option" data-answer="A">A) Solid phase (π/50 ≈ 0.15)</div>
+                    <div class="option" data-answer="B">B) Liquid phase (π/10 ≈ 0.32)</div>
+                    <div class="option" data-answer="C">C) Gas phase (π/9 ≈ 0.34)</div>
+                    <div class="option" data-answer="D">D) Plasma phase (π/5 ≈ 0.63)</div>
+                </div>
+            </div>
+
+            <div class="question" id="q10">
+                <div class="question-header">
+                    <div class="question-number">Q10. <span class="marks">4 marks</span></div>
+                    <div>
+                        <span class="difficulty medium">Medium</span>
+                        <span class="domain-tag complexity">Complexity</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    What does a paving number (r_ε) greater than one imply in the simulation hypothesis framework?
+                </div>
+                <div class="options">
+                    <div class="option" data-answer="A">A) System is computationally irreducible</div>
+                    <div class="option" data-answer="B">B) System requires non-zero thermodynamic cost (real universe)</div>
+                    <div class="option" data-answer="C">C) System can be compressed without loss</div>
+                    <div class="option" data-answer="D">D) System exhibits topological protection</div>
+                </div>
+            </div>
+
+            <!-- Continue with more questions... -->
+            
+        </div>
+
+        <!-- SECTION 2: SPECTRAL THEORY & TOPOLOGY (20 questions) -->
+        <div class="section">
+            <div class="section-header">
+                Section 2: Spectral Theory & Advanced Topology (80 marks)
+            </div>
+            
+            <div class="question" id="q26">
+                <div class="question-header">
+                    <div class="question-number">Q26. <span class="marks">4 marks</span></div>
+                    <div>
+                        <span class="difficulty medium">Medium</span>
+                        <span class="domain-tag topology">Topology</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    What mathematical object describes the higher-order failure to consistently compose three or more local solutions?
+                </div>
+                <div class="options">
+                    <div class="option" data-answer="A">A) Fiber bundle</div>
+                    <div class="option" data-answer="B">B) Sheaf</div>
+                    <div class="option" data-answer="C">C) Gerbe</div>
+                    <div class="option" data-answer="D">D) Manifold</div>
+                </div>
+            </div>
+
+            <!-- More spectral/topology questions... -->
+            
+        </div>
+
+        <!-- SECTION 3: QUANTUM MECHANICS & INFORMATION (20 questions) -->
+        <div class="section">
+            <div class="section-header">
+                Section 3: Quantum Mechanics & Information Theory (80 marks)
+            </div>
+            
+            <div class="question" id="q46">
+                <div class="question-header">
+                    <div class="question-number">Q46. <span class="marks">4 marks</span></div>
+                    <div>
+                        <span class="difficulty hard">Hard</span>
+                        <span class="domain-tag quantum">Quantum</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    The Hilbert-Pólya conjecture proposes what connection between number theory and quantum physics?
+                </div>
+                <div class="options">
+                    <div class="option" data-answer="A">A) Prime distribution follows Schrödinger equation</div>
+                    <div class="option" data-answer="B">B) Riemann zeta zeros are eigenvalues of unknown self-adjoint operator</div>
+                    <div class="option" data-answer="C">C) Primes are sum of two squares via quantum superposition</div>
+                    <div class="option" data-answer="D">D) Majorana fermions described by zeta function</div>
+                </div>
+            </div>
+
+            <!-- More quantum/info questions... -->
+            
+        </div>
+
+        <!-- SECTION 4: AI THEORY & COMPUTATION (20 questions) -->
+        <div class="section">
+            <div class="section-header">
+                Section 4: AI Theory & Computational Intelligence (80 marks)
+            </div>
+            
+            <div class="question" id="q66">
+                <div class="question-header">
+                    <div class="question-number">Q66. <span class="marks">4 marks</span></div>
+                    <div>
+                        <span class="difficulty nightmare">Nightmare</span>
+                        <span class="domain-tag ai">AI Theory</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    In the Operator Theory of Everything, which Millennium Prize Problem tests the fundamental limits of the "Collapse Code"?
+                </div>
+                <div class="options">
+                    <div class="option" data-answer="A">A) Hodge Conjecture (Bifurcation)</div>
+                    <div class="option" data-answer="B">B) Riemann Hypothesis (Symmetry)</div>
+                    <div class="option" data-answer="C">C) P vs NP Problem (Collapse)</div>
+                    <div class="option" data-answer="D">D) Navier-Stokes (Invariance)</div>
+                </div>
+            </div>
+
+            <!-- More AI/computation questions... -->
+            
+        </div>
+
+        <!-- Final brutal questions... -->
+        <div class="question" id="q85">
+            <div class="question-header">
+                <div class="question-number">Q85. <span class="marks">4 marks</span></div>
+                <div>
+                    <span class="difficulty nightmare">Nightmare</span>
+                    <span class="domain-tag galois">Synthesis</span>
+                </div>
+            </div>
+            <div class="question-text">
+                The "Ramanujan-Einstein boundary" in cognitive science represents the critical point where consciousness emerges. This synthesis combines which two fundamental principles?
+            </div>
+            <div class="options">
+                <div class="option" data-answer="A">A) Quantum superposition + Classical determinism</div>
+                <div class="option" data-answer="B">B) Optimal network expansion + Bose-Einstein condensation</div>
+                <div class="option" data-answer="C">C) Discrete computation + Continuous spacetime</div>
+                <div class="option" data-answer="D">D) Local interactions + Global emergence</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Exam state management
+        let timeLeft = 4 * 60 * 60; // 4 hours
+        let answers = {};
+        let flagged = new Set();
+        let currentQuestion = 1;
+        
+        // Timer functionality
+        function updateTimer() {
+            const hours = Math.floor(timeLeft / 3600);
+            const minutes = Math.floor((timeLeft % 3600) / 60);
+            const seconds = timeLeft % 60;
+            
+            const timerDisplay = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById('timer').textContent = timerDisplay;
+            
+            if (timeLeft < 600) { // Last 10 minutes
+                document.getElementById('timer').classList.add('warning');
+            }
+            
+            if (timeLeft > 0) {
+                timeLeft--;
+            } else {
+                alert('Time\'s up! Exam auto-submitted.');
+                submitExam();
+            }
+        }
+        
+        setInterval(updateTimer, 1000);
+        
+        // Initialize navigation
+        function initializeNavigation() {
+            const nav = document.getElementById('question-nav');
+            for (let i = 1; i <= 85; i++) {
+                const btn = document.createElement('button');
+                btn.textContent = i;
+                btn.className = 'nav-btn';
+                btn.onclick = () => navigateToQuestion(i);
+                btn.id = `nav-${i}`;
+                nav.appendChild(btn);
+            }
+        }
+        
+        // Navigation functions
+        function navigateToQuestion(qNum) {
+            document.getElementById(`q${qNum}`)?.scrollIntoView({ behavior: 'smooth' });
+            updateCurrentQuestion(qNum);
+        }
+        
+        function updateCurrentQuestion(qNum) {
+            // Remove current highlighting
+            document.querySelectorAll('.nav-btn.current').forEach(btn => {
+                btn.classList.remove('current');
+            });
+            
+            // Add current highlighting
+            document.getElementById(`nav-${qNum}`)?.classList.add('current');
+            currentQuestion = qNum;
+        }
+        
+        // Answer tracking
+        function handleAnswerSelection(questionNum, selectedAnswer) {
+            answers[questionNum] = selectedAnswer;
+            
+            // Update navigation button
+            const navBtn = document.getElementById(`nav-${questionNum}`);
+            if (navBtn) {
+                navBtn.classList.add('answered');
+            }
+            
+            updateProgress();
+        }
+        
+        // Progress tracking
+        function updateProgress() {
+            const totalAnswered = Object.keys(answers).length;
+            const progressPercent = (totalAnswered / 85) * 100;
+            
+            document.getElementById('overall-progress').style.width = `${progressPercent}%`;
+            document.getElementById('progress-stats').textContent = `${totalAnswered}/85 answered`;
+            
+            // Update section statistics
+            updateSectionStats();
+        }
+        
+        function updateSectionStats() {
+            const sections = [
+                { name: 'Math Foundations', range: [1, 25] },
+                { name: 'Spectral/Topology', range: [26, 45] },
+                { name: 'Quantum/Info', range: [46, 65] },
+                { name: 'AI/Computation', range: [66, 85] }
+            ];
+            
+            let statsHTML = '';
+            sections.forEach(section => {
+                const answered = section.range[1] - section.range[0] + 1;
+                const total = section.range[1] - section.range[0] + 1;
+                const sectionAnswered = Object.keys(answers).filter(q => 
+                    q >= section.range[0] && q <= section.range[1]
+                ).length;
+                
+                statsHTML += `<div>${section.name}: ${sectionAnswered}/${total}</div>`;
+            });
+            
+            document.getElementById('section-stats').innerHTML = statsHTML;
+        }
+        
+        // Question flagging
+        function flagQuestion() {
+            const qNum = currentQuestion;
+            const navBtn = document.getElementById(`nav-${qNum}`);
+            
+            if (flagged.has(qNum)) {
+                flagged.delete(qNum);
+                navBtn.classList.remove('flagged');
+            } else {
+                flagged.add(qNum);
+                navBtn.classList.add('flagged');
+            }
+        }
+        
+        // Review and submission
+        function reviewAnswers() {
+            const unanswered = [];
+            for (let i = 1; i <= 85; i++) {
+                if (!answers[i]) {
+                    unanswered.push(i);
+                }
+            }
+            
+            if (unanswered.length > 0) {
+                alert(`Unanswered questions: ${unanswered.join(', ')}`);
+            } else {
+                alert('All questions answered! Ready to submit.');
+            }
+        }
+        
+        function submitExam() {
+            const totalAnswered = Object.keys(answers).length;
+            const confirmed = confirm(`Submit exam with ${totalAnswered}/85 questions answered?`);
+            
+            if (confirmed) {
+                // Calculate preliminary score
+                let score = 0;
+                // This would need the answer key for real scoring
+                alert(`Exam submitted! Answered: ${totalAnswered}/85 questions`);
+            }
+        }
+        
+        // Event listeners for answer selection
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeNavigation();
+            
+            document.querySelectorAll('.option').forEach(option => {
+                option.addEventListener('click', function() {
+                    const question = this.closest('.question');
+                    const qNum = parseInt(question.id.replace('q', ''));
+                    const selectedAnswer = this.dataset.answer;
+                    
+                    // Clear previous selections
+                    question.querySelectorAll('.option').forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+                    
+                    // Mark current selection
+                    this.classList.add('selected');
+                    
+                    // Store answer
+                    handleAnswerSelection(qNum, selectedAnswer);
+                });
+            });
+        });
+        
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey || e.metaKey) {
+                switch(e.key) {
+                    case 'f':
+                        e.preventDefault();
+                        flagQuestion();
+                        break;
+                    case 'r':
+                        e.preventDefault();
+                        reviewAnswers();
+                        break;
+                    case 's':
+                        e.preventDefault();
+                        submitExam();
+                        break;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
