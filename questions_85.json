@@ -1,0 +1,2386 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "section": "Mathematical Foundations",
+      "difficulty": "Easy",
+      "domain": "Galois Theory",
+      "marks": 4,
+      "question": "In cyclotomic fields Q(\u03b6\u2099), what fundamental property ensures that elementary symmetric polynomials in the roots of unity yield integer coefficients?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fundamental Theorem of Algebra"
+        },
+        {
+          "id": "B",
+          "text": "Galois group action preserves rational numbers"
+        },
+        {
+          "id": "C",
+          "text": "Chebyshev polynomial recursion"
+        },
+        {
+          "id": "D",
+          "text": "Discrete Fourier Transform properties"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Galois group acts by permuting roots of unity. Since polynomial coefficients are elementary symmetric polynomials and symmetric polynomials are invariant under Galois action, they must lie in the base field (rationals)."
+    },
+    {
+      "id": 2,
+      "section": "Mathematical Foundations",
+      "difficulty": "Easy",
+      "domain": "Quantum",
+      "marks": 4,
+      "question": "What unique property makes Majorana Zero Modes (MZMs) exceptionally stable for quantum computing applications?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Zero electrical charge"
+        },
+        {
+          "id": "B",
+          "text": "Topological protection from local disturbances"
+        },
+        {
+          "id": "C",
+          "text": "Existence only at absolute zero"
+        },
+        {
+          "id": "D",
+          "text": "Infinite coherence time"
+        }
+      ],
+      "correct": "B",
+      "explanation": "MZMs have topological protection where information is encoded non-locally in the system's topology, making them robust against local noise and disturbances."
+    },
+    {
+      "id": 3,
+      "section": "Mathematical Foundations",
+      "difficulty": "Easy",
+      "domain": "Information Theory",
+      "marks": 4,
+      "question": "According to Landauer's principle, what is the minimum thermodynamic cost of erasing one bit of information?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Zero energy"
+        },
+        {
+          "id": "B",
+          "text": "kT ln(2) joules"
+        },
+        {
+          "id": "C",
+          "text": "One photon energy"
+        },
+        {
+          "id": "D",
+          "text": "Planck constant \u210f"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Landauer's principle establishes that erasing one bit requires minimum energy kT ln(2), where k is Boltzmann's constant and T is temperature."
+    },
+    {
+      "id": 4,
+      "section": "Mathematical Foundations",
+      "difficulty": "Easy",
+      "domain": "Spectral Theory",
+      "marks": 4,
+      "question": "In harmonic polytope theory, what value does the harmonic constant \u03bb take for isotropic configurations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "\u03c0"
+        },
+        {
+          "id": "B",
+          "text": "e"
+        },
+        {
+          "id": "C",
+          "text": "1/d (where d is dimension)"
+        },
+        {
+          "id": "D",
+          "text": "Golden ratio \u03c6"
+        }
+      ],
+      "correct": "C",
+      "explanation": "The trace identity forces \u03bb = 1/d for harmonic configurations, making the covariance matrix C = (1/d)I."
+    },
+    {
+      "id": 5,
+      "section": "Mathematical Foundations",
+      "difficulty": "Easy",
+      "domain": "AI Theory",
+      "marks": 4,
+      "question": "What mathematical functions are used for positional embeddings in transformer architectures?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Polynomial functions"
+        },
+        {
+          "id": "B",
+          "text": "Exponential functions"
+        },
+        {
+          "id": "C",
+          "text": "Sinusoidal functions (sin/cos)"
+        },
+        {
+          "id": "D",
+          "text": "Logarithmic functions"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Transformer positional embeddings use sinusoidal functions: PE(pos,2i) = sin(pos/10000^(2i/d)) and PE(pos,2i+1) = cos(pos/10000^(2i/d))."
+    },
+    {
+      "id": 6,
+      "section": "Mathematical Foundations",
+      "difficulty": "Medium",
+      "domain": "Spectral Theory",
+      "marks": 4,
+      "question": "What property makes Ramanujan graphs 'optimal expanders' in network theory?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maximum edge density"
+        },
+        {
+          "id": "B",
+          "text": "Large spectral gap with minimal connectivity"
+        },
+        {
+          "id": "C",
+          "text": "Perfect planarity"
+        },
+        {
+          "id": "D",
+          "text": "Regular degree sequence"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Ramanujan graphs achieve optimal expansion through maximal spectral gap, ensuring rapid information mixing with minimal connectivity."
+    },
+    {
+      "id": 7,
+      "section": "Mathematical Foundations",
+      "difficulty": "Easy",
+      "domain": "Geometry",
+      "marks": 4,
+      "question": "In the harmonic polytope definition, what does the centering condition require?",
+      "options": [
+        {
+          "id": "A",
+          "text": "All vectors have unit length"
+        },
+        {
+          "id": "B",
+          "text": "Sum of all vectors equals zero"
+        },
+        {
+          "id": "C",
+          "text": "Vectors are mutually orthogonal"
+        },
+        {
+          "id": "D",
+          "text": "Covariance matrix is diagonal"
+        }
+      ],
+      "correct": "B",
+      "explanation": "The centering condition \u03a3v\u2096 = 0 places the centroid at the origin, removing the 'DC mode' and enabling geometric discipline."
+    },
+    {
+      "id": 8,
+      "section": "Mathematical Foundations",
+      "difficulty": "Easy",
+      "domain": "Quantum",
+      "marks": 4,
+      "question": "What fundamental property distinguishes self-adjoint operators in quantum mechanics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Complex eigenvalues"
+        },
+        {
+          "id": "B",
+          "text": "Real eigenvalues and orthogonal eigenvectors"
+        },
+        {
+          "id": "C",
+          "text": "Finite dimensionality"
+        },
+        {
+          "id": "D",
+          "text": "Commutation with all operators"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Self-adjoint operators guarantee measurable (real) eigenvalues and orthogonal eigenvectors, providing stable decomposition essential for quantum observables."
+    },
+    {
+      "id": 9,
+      "section": "Mathematical Foundations",
+      "difficulty": "Medium",
+      "domain": "AI Theory",
+      "marks": 4,
+      "question": "In cognitive thermodynamics, which phase corresponds to maximum creativity and chaotic exploration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solid phase (\u03c0/50 \u2248 0.15)"
+        },
+        {
+          "id": "B",
+          "text": "Liquid phase (\u03c0/10 \u2248 0.32)"
+        },
+        {
+          "id": "C",
+          "text": "Gas phase (\u03c0/9 \u2248 0.34)"
+        },
+        {
+          "id": "D",
+          "text": "Plasma phase (\u03c0/5 \u2248 0.63)"
+        }
+      ],
+      "correct": "C",
+      "explanation": "The gaseous phase (\u03c0/9 \u2248 0.34) corresponds to high memory decay rates, enabling chaotic exploration and creative thinking by rapidly forgetting old patterns."
+    },
+    {
+      "id": 10,
+      "section": "Mathematical Foundations",
+      "difficulty": "Medium",
+      "domain": "Complexity Theory",
+      "marks": 4,
+      "question": "What does a paving number (r_\u03b5) greater than one imply in the simulation hypothesis framework?",
+      "options": [
+        {
+          "id": "A",
+          "text": "System is computationally irreducible"
+        },
+        {
+          "id": "B",
+          "text": "System requires non-zero thermodynamic cost (real universe)"
+        },
+        {
+          "id": "C",
+          "text": "System can be compressed without loss"
+        },
+        {
+          "id": "D",
+          "text": "System exhibits topological protection"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Paving number > 1 indicates irreducible twists requiring non-zero work to resolve incompatible viewpoints, distinguishing reality from cost-free simulation."
+    },
+    {
+      "id": 11,
+      "section": "Mathematical Foundations",
+      "difficulty": "Medium",
+      "domain": "Galois Theory",
+      "marks": 4,
+      "question": "In Binet's formula for Fibonacci numbers, why do irrational terms involving \u221a5 always yield integer results?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Trigonometric identities cancel irrationals"
+        },
+        {
+          "id": "B",
+          "text": "Galois conjugation symmetry forces cancellation"
+        },
+        {
+          "id": "C",
+          "text": "Logarithmic transformation to rational addition"
+        },
+        {
+          "id": "D",
+          "text": "Convergence eliminates irrational parts over time"
+        }
+      ],
+      "correct": "B",
+      "explanation": "The golden ratio \u03c6 and its conjugate are Galois conjugates in Q(\u221a5). Binet's formula is symmetric under conjugation, forcing irrational parts to cancel."
+    },
+    {
+      "id": 12,
+      "section": "Mathematical Foundations",
+      "difficulty": "Medium",
+      "domain": "Spectral Theory",
+      "marks": 4,
+      "question": "What is the fundamental harmonic gap \u03b3(H\u2099) in harmonic polytope spectral theory?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Largest eigenvalue of harmonic Laplacian"
+        },
+        {
+          "id": "B",
+          "text": "Smallest non-zero eigenvalue of \u0394 = I - A"
+        },
+        {
+          "id": "C",
+          "text": "Difference between largest and smallest eigenvalues"
+        },
+        {
+          "id": "D",
+          "text": "Sum of all eigenvalues"
+        }
+      ],
+      "correct": "B",
+      "explanation": "The fundamental harmonic gap \u03b3(H\u2099) := \u03bb\u2081 is the smallest non-zero eigenvalue of the harmonic Laplacian \u0394 = I - A, measuring configuration rigidity."
+    },
+    {
+      "id": 13,
+      "section": "Mathematical Foundations",
+      "difficulty": "Hard",
+      "domain": "Topology",
+      "marks": 4,
+      "question": "What mathematical object captures the higher-order failure to consistently compose three or more local solutions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fiber bundle (two-patch failure)"
+        },
+        {
+          "id": "B",
+          "text": "Sheaf (local data organization)"
+        },
+        {
+          "id": "C",
+          "text": "Gerbe (three-or-more composition failure)"
+        },
+        {
+          "id": "D",
+          "text": "Manifold (solution space)"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Gerbes formalize higher-order obstructions where three or more local solutions cannot be consistently composed, providing mathematical foundation for computational hardness."
+    },
+    {
+      "id": 14,
+      "section": "Mathematical Foundations",
+      "difficulty": "Easy",
+      "domain": "Information Theory",
+      "marks": 4,
+      "question": "In the information bottleneck principle, what optimization trade-off do biological systems make?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maximum information capture regardless of cost"
+        },
+        {
+          "id": "B",
+          "text": "Minimum processing speed with maximum accuracy"
+        },
+        {
+          "id": "C",
+          "text": "Maximum predictive information with minimum metabolic cost"
+        },
+        {
+          "id": "D",
+          "text": "Perfect information storage with zero loss"
+        }
+      ],
+      "correct": "C",
+      "explanation": "The information bottleneck principle optimizes the trade-off between capturing relevant environmental information and minimizing the metabolic cost of processing."
+    },
+    {
+      "id": 15,
+      "section": "Mathematical Foundations",
+      "difficulty": "Medium",
+      "domain": "Geometry",
+      "marks": 4,
+      "question": "What geometric property allows hyperbolic space to efficiently represent hierarchical data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Zero curvature for linear extrapolation"
+        },
+        {
+          "id": "B",
+          "text": "Positive curvature causing convergence"
+        },
+        {
+          "id": "C",
+          "text": "Negative curvature enabling exponential volume growth"
+        },
+        {
+          "id": "D",
+          "text": "Non-differentiable structure for sudden changes"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Hyperbolic space's negative curvature causes exponential volume growth, naturally accommodating hierarchical structures in fewer dimensions."
+    },
+    {
+      "id": 16,
+      "section": "Mathematical Foundations",
+      "difficulty": "Hard",
+      "domain": "Galois Theory",
+      "marks": 4,
+      "question": "In the planar Fourier characterization of harmonic configurations, what conditions must angles \u03b8\u2096 satisfy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "\u2211e^(i\u03b8\u2096) = 0 only"
+        },
+        {
+          "id": "B",
+          "text": "\u2211e^(2i\u03b8\u2096) = 0 only"
+        },
+        {
+          "id": "C",
+          "text": "Both \u2211e^(i\u03b8\u2096) = 0 and \u2211e^(2i\u03b8\u2096) = 0"
+        },
+        {
+          "id": "D",
+          "text": "\u2211cos(\u03b8\u2096) = 0 and \u2211sin(\u03b8\u2096) = 0"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Planar harmonicity requires vanishing first mode (centering) \u2211e^(i\u03b8\u2096) = 0 and second mode (isotropy) \u2211e^(2i\u03b8\u2096) = 0."
+    },
+    {
+      "id": 17,
+      "section": "Mathematical Foundations",
+      "difficulty": "Medium",
+      "domain": "Spectral Theory",
+      "marks": 4,
+      "question": "What does the tight Parseval identity reveal about harmonic configurations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Energy concentrates in preferred directions"
+        },
+        {
+          "id": "B",
+          "text": "Average projection varies with direction"
+        },
+        {
+          "id": "C",
+          "text": "Every direction receives exactly its fair share of energy"
+        },
+        {
+          "id": "D",
+          "text": "Energy distribution follows normal distribution"
+        }
+      ],
+      "correct": "C",
+      "explanation": "The identity (1/n)\u2211\u27e8v\u2096,u\u27e9\u00b2 = (1/d)||u||\u00b2 shows every direction receives exactly 1/d times its squared length in energy."
+    },
+    {
+      "id": 18,
+      "section": "Mathematical Foundations",
+      "difficulty": "Easy",
+      "domain": "AI Theory",
+      "marks": 4,
+      "question": "What problem do Chebyshev polynomials solve in transformer attention mechanisms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Computational complexity reduction"
+        },
+        {
+          "id": "B",
+          "text": "Oversmoothing and information loss"
+        },
+        {
+          "id": "C",
+          "text": "Memory optimization"
+        },
+        {
+          "id": "D",
+          "text": "Gradient vanishing"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Chebyshev polynomials prevent oversmoothing by maintaining both low and high-frequency components that standard attention loses in deeper layers."
+    },
+    {
+      "id": 19,
+      "section": "Mathematical Foundations",
+      "difficulty": "Medium",
+      "domain": "Complexity Theory",
+      "marks": 4,
+      "question": "In the spectral pairing algorithm, what advantage does viewing data indices as a cyclic group provide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Guarantees global optimum in polynomial time"
+        },
+        {
+          "id": "B",
+          "text": "Enables pairing of distant elements for better balance"
+        },
+        {
+          "id": "C",
+          "text": "Reduces to continuous optimization problem"
+        },
+        {
+          "id": "D",
+          "text": "Requires equal partition sizes"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Cyclic group perspective allows modular selection patterns, enabling globally balanced non-contiguous partitions impossible with sequential cuts."
+    },
+    {
+      "id": 20,
+      "section": "Mathematical Foundations",
+      "difficulty": "Hard",
+      "domain": "Galois Theory",
+      "marks": 4,
+      "question": "What is the dimension of the moduli space M\u2099,d for harmonic configurations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "nd"
+        },
+        {
+          "id": "B",
+          "text": "nd - d"
+        },
+        {
+          "id": "C",
+          "text": "nd - d - d\u00b2"
+        },
+        {
+          "id": "D",
+          "text": "nd - d\u00b2 - d(d+1)/2"
+        }
+      ],
+      "correct": "C",
+      "explanation": "After removing constraints (centering: d, covariance: d(d+1)/2, rotations: d(d-1)/2), dimension = nd - d - d\u00b2."
+    },
+    {
+      "id": 21,
+      "section": "Mathematical Foundations",
+      "difficulty": "Medium",
+      "domain": "Geometry",
+      "marks": 4,
+      "question": "In the harmonic polytope volume bound theorem, what form do the volume constants take?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Irrational multiples of \u03c0"
+        },
+        {
+          "id": "B",
+          "text": "Rational multiples of d^(-d/2)"
+        },
+        {
+          "id": "C",
+          "text": "Transcendental numbers"
+        },
+        {
+          "id": "D",
+          "text": "Perfect squares"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Volume bounds are rational multiples of d^(-d/2) due to the discreteness of scale induced by unit-norm and isotropy constraints."
+    },
+    {
+      "id": 22,
+      "section": "Mathematical Foundations",
+      "difficulty": "Hard",
+      "domain": "Spectral Theory",
+      "marks": 4,
+      "question": "What does Algorithm B (Centroidal Tightening) minimize in its optimization formulation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total vector length"
+        },
+        {
+          "id": "B",
+          "text": "Distance from input vectors while enforcing constraints"
+        },
+        {
+          "id": "C",
+          "text": "Spectral gap of resulting configuration"
+        },
+        {
+          "id": "D",
+          "text": "Entropy of the configuration"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Algorithm B solves min \u03a3||v\u2096 - w\u2096||\u00b2 subject to centering and isotropy constraints, finding harmonic configuration closest to input vectors."
+    },
+    {
+      "id": 23,
+      "section": "Mathematical Foundations",
+      "difficulty": "Medium",
+      "domain": "Information Theory",
+      "marks": 4,
+      "question": "Why does harmonicity correspond to maximum entropy under geometric constraints?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Uniform eigenvalue spectrum maximizes entropy"
+        },
+        {
+          "id": "B",
+          "text": "Random vector placement increases uncertainty"
+        },
+        {
+          "id": "C",
+          "text": "Symmetry creates maximum information content"
+        },
+        {
+          "id": "D",
+          "text": "Isotropy distributes information equally across directions"
+        }
+      ],
+      "correct": "A",
+      "explanation": "For harmonic configurations C = (1/d)I, all eigenvalues are 1/d, giving uniform spectrum that maximizes entropy S = log d."
+    },
+    {
+      "id": 24,
+      "section": "Mathematical Foundations",
+      "difficulty": "Hard",
+      "domain": "Topology",
+      "marks": 4,
+      "question": "What does Theorem 4.2 (Dual harmonicity) state about polar polytopes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Polars lose harmonic structure"
+        },
+        {
+          "id": "B",
+          "text": "Polars preserve harmonicity after rescaling"
+        },
+        {
+          "id": "C",
+          "text": "Polars become regular polytopes"
+        },
+        {
+          "id": "D",
+          "text": "Polars have double the vertices"
+        }
+      ],
+      "correct": "B",
+      "explanation": "The set of unit outer normals of H\u2099 forms a harmonic configuration after canonical rescaling that preserves isotropy."
+    },
+    {
+      "id": 25,
+      "section": "Mathematical Foundations",
+      "difficulty": "Easy",
+      "domain": "Geometry",
+      "marks": 4,
+      "question": "What does irreducible harmonic components theorem guarantee?",
+      "options": [
+        {
+          "id": "A",
+          "text": "All configurations are irreducible"
+        },
+        {
+          "id": "B",
+          "text": "Unique finest partition into harmonic blocks"
+        },
+        {
+          "id": "C",
+          "text": "Decomposition always has two components"
+        },
+        {
+          "id": "D",
+          "text": "Components have equal sizes"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Every harmonic configuration admits unique finest partition into blocks satisfying harmonic conditions blockwise."
+    },
+    {
+      "id": 26,
+      "section": "Spectral Theory",
+      "difficulty": "Medium",
+      "domain": "Spectral Theory",
+      "marks": 4,
+      "question": "In the harmonic Laplacian \u0394 = I - A, why is the standard graph Laplacian D - A degenerate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Negative eigenvalues present"
+        },
+        {
+          "id": "B",
+          "text": "Row sums vanish due to centering condition"
+        },
+        {
+          "id": "C",
+          "text": "Matrix is not symmetric"
+        },
+        {
+          "id": "D",
+          "text": "Infinite eigenvalues exist"
+        }
+      ],
+      "correct": "B",
+      "explanation": "For centered configurations \u03a3v\u2c7c = 0, row sums of affinity matrix vanish: \u03a3\u2c7c A\u1d62\u2c7c = \u27e8v\u1d62, \u03a3\u2c7c v\u2c7c\u27e9 = 0, making D - A = -A degenerate."
+    },
+    {
+      "id": 27,
+      "section": "Spectral Theory",
+      "difficulty": "Hard",
+      "domain": "Spectral Theory",
+      "marks": 4,
+      "question": "What does the Gap-Isotropy Connection theorem reveal about spectral rigidity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Isotropy decreases spectral gap"
+        },
+        {
+          "id": "B",
+          "text": "Gap is independent of isotropy"
+        },
+        {
+          "id": "C",
+          "text": "Isotropy enforces spectral rigidity via larger gaps"
+        },
+        {
+          "id": "D",
+          "text": "Gap depends only on number of vertices"
+        }
+      ],
+      "correct": "C",
+      "explanation": "More isotropic configurations have larger fundamental gaps: \u03b3(H\u2099) \u2265 n(1/d - \u03c1) where \u03c1 bounds off-diagonal entries."
+    },
+    {
+      "id": 28,
+      "section": "Spectral Theory",
+      "difficulty": "Medium",
+      "domain": "Spectral Theory",
+      "marks": 4,
+      "question": "What geometric interpretation does the harmonic Laplacian quadratic form E(f) = f^T \u0394f provide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Energy with respect to geometric structure"
+        },
+        {
+          "id": "B",
+          "text": "Distance between configurations"
+        },
+        {
+          "id": "C",
+          "text": "Volume of harmonic polytope"
+        },
+        {
+          "id": "D",
+          "text": "Spectral entropy measure"
+        }
+      ],
+      "correct": "A",
+      "explanation": "E(f) measures energy of function f with respect to geometric structure, where high affinity reduces energy for functions respecting relationships."
+    },
+    {
+      "id": 29,
+      "section": "Spectral Theory",
+      "difficulty": "Hard",
+      "domain": "Topology",
+      "marks": 4,
+      "question": "What does the kernel structure of the harmonic Laplacian reveal?",
+      "options": [
+        {
+          "id": "A",
+          "text": "All-ones vector is in kernel"
+        },
+        {
+          "id": "B",
+          "text": "All-ones vector has eigenvalue 1"
+        },
+        {
+          "id": "C",
+          "text": "Kernel relates to harmonic modes"
+        },
+        {
+          "id": "D",
+          "text": "Matrix is singular"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Since \u03941 = 1 - A1 = 1 (because A1 = 0 from centering), the all-ones vector is eigenvector with eigenvalue 1, not in kernel."
+    },
+    {
+      "id": 30,
+      "section": "Spectral Theory",
+      "difficulty": "Medium",
+      "domain": "Spectral Theory",
+      "marks": 4,
+      "question": "In PageRank convergence theory applied to attention matrices, which three conditions ensure rapid convergence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Symmetric, positive definite, sparse"
+        },
+        {
+          "id": "B",
+          "text": "Stochastic, irreducible, aperiodic"
+        },
+        {
+          "id": "C",
+          "text": "Orthogonal, normalized, bounded"
+        },
+        {
+          "id": "D",
+          "text": "Hermitian, unitary, compact"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Attention matrices satisfy PageRank conditions: stochastic (softmax normalization), irreducible (non-zero probabilities), aperiodic (self-loops)."
+    },
+    {
+      "id": 31,
+      "section": "Spectral Theory",
+      "difficulty": "Hard",
+      "domain": "Spectral Theory",
+      "marks": 4,
+      "question": "What does the spectral completeness property of Chebyshev expansion guarantee in attention mechanisms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only low-frequency preservation"
+        },
+        {
+          "id": "B",
+          "text": "Only high-frequency preservation"
+        },
+        {
+          "id": "C",
+          "text": "Both low and high-frequency component capture"
+        },
+        {
+          "id": "D",
+          "text": "Frequency-independent uniform response"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Chebyshev expansion captures full spectral information that standard attention loses, preserving both low and high-frequency components essential for representation."
+    },
+    {
+      "id": 32,
+      "section": "Spectral Theory",
+      "difficulty": "Medium",
+      "domain": "Geometry",
+      "marks": 4,
+      "question": "What does the balanced support lemma state for harmonic configurations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Support is always positive"
+        },
+        {
+          "id": "B",
+          "text": "Support distribution is mean-zero with variance 1/d"
+        },
+        {
+          "id": "C",
+          "text": "Support is uniformly distributed"
+        },
+        {
+          "id": "D",
+          "text": "Support depends on dimension only"
+        }
+      ],
+      "correct": "B",
+      "explanation": "For any direction u, support distribution has mean zero and variance 1/d: (1/n)\u03a3\u27e8u,v\u2096\u27e9 = 0 and (1/n)\u03a3\u27e8u,v\u2096\u27e9\u00b2 = 1/d."
+    },
+    {
+      "id": 33,
+      "section": "Spectral Theory",
+      "difficulty": "Hard",
+      "domain": "Spectral Theory",
+      "marks": 4,
+      "question": "In the stability theorem for harmonic configurations, what do the constants c\u2081, c\u2082 depend on?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Number of vectors n"
+        },
+        {
+          "id": "B",
+          "text": "Dimension d only"
+        },
+        {
+          "id": "C",
+          "text": "Both n and d"
+        },
+        {
+          "id": "D",
+          "text": "Universal constants independent of parameters"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Constants c\u2081, c\u2082 in ||v\u2096 - v\u0302\u2096|| \u2264 c\u2081\u03b5 + c\u2082\u03b4 depend only on dimension d, making stability bounds universal for fixed dimension."
+    },
+    {
+      "id": 34,
+      "section": "Spectral Theory",
+      "difficulty": "Medium",
+      "domain": "Information Theory",
+      "marks": 4,
+      "question": "What variational principle characterizes harmonic configurations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Minimum total energy"
+        },
+        {
+          "id": "B",
+          "text": "Maximum spectral entropy under zero-sum constraint"
+        },
+        {
+          "id": "C",
+          "text": "Minimum variance across directions"
+        },
+        {
+          "id": "D",
+          "text": "Maximum determinant of covariance"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Among zero-sum unit vector configurations, harmonic ones maximize entropy functional J(C) = -\u03a3\u03bb\u0303\u1d62 log \u03bb\u0303\u1d62."
+    },
+    {
+      "id": 35,
+      "section": "Spectral Theory",
+      "difficulty": "Hard",
+      "domain": "Topology",
+      "marks": 4,
+      "question": "What does the canonical decomposition theorem reveal about reducible harmonic configurations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They cannot exist"
+        },
+        {
+          "id": "B",
+          "text": "They decompose into Minkowski sums"
+        },
+        {
+          "id": "C",
+          "text": "They always have two components"
+        },
+        {
+          "id": "D",
+          "text": "They lose harmonic properties"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Reducible configurations decompose as H\u2099 = conv(\u22c3\u2098 P\u2098) where P\u2098 are irreducible harmonic components."
+    },
+    {
+      "id": 36,
+      "section": "Spectral Theory",
+      "difficulty": "Medium",
+      "domain": "Geometry",
+      "marks": 4,
+      "question": "What does the volume bound theorem guarantee about harmonic polytope volumes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Volumes are always rational"
+        },
+        {
+          "id": "B",
+          "text": "Volumes are rational multiples of d^(-d/2)"
+        },
+        {
+          "id": "C",
+          "text": "Volumes approach zero as d increases"
+        },
+        {
+          "id": "D",
+          "text": "Volumes are independent of n"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Volume bounds are rational multiples of d^(-d/2) due to Gram determinant control and tightness fixing average simplex volumes."
+    },
+    {
+      "id": 37,
+      "section": "Spectral Theory",
+      "difficulty": "Hard",
+      "domain": "Spectral Theory",
+      "marks": 4,
+      "question": "What does Algorithm C (Gram Synthesis) construct first before factoring into vectors?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Covariance matrix"
+        },
+        {
+          "id": "B",
+          "text": "Affinity matrix"
+        },
+        {
+          "id": "C",
+          "text": "Gram matrix with specific eigenvalue structure"
+        },
+        {
+          "id": "D",
+          "text": "Laplacian matrix"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Algorithm C synthesizes Gram matrix G with d eigenvalues equal to n/d and n-d zeros, then factors G = VV^T to obtain vectors."
+    },
+    {
+      "id": 38,
+      "section": "Spectral Theory",
+      "difficulty": "Medium",
+      "domain": "Geometry",
+      "marks": 4,
+      "question": "What complexity does representing harmonic polytopes naively require?",
+      "options": [
+        {
+          "id": "A",
+          "text": "O(n)"
+        },
+        {
+          "id": "B",
+          "text": "O(nd)"
+        },
+        {
+          "id": "C",
+          "text": "O(nd\u00b2)"
+        },
+        {
+          "id": "D",
+          "text": "O(n^d)"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Naive representation as list of n vertices in d-dimensional space requires O(nd) storage."
+    },
+    {
+      "id": 39,
+      "section": "Spectral Theory",
+      "difficulty": "Hard",
+      "domain": "Spectral Theory",
+      "marks": 4,
+      "question": "What does the irreducible harmonic components theorem guarantee about finest partitions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Multiple valid partitions exist"
+        },
+        {
+          "id": "B",
+          "text": "Unique finest partition up to permutation"
+        },
+        {
+          "id": "C",
+          "text": "Partitions always have equal sizes"
+        },
+        {
+          "id": "D",
+          "text": "Partitions minimize spectral gap"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Every harmonic configuration admits unique (up to permutation) finest partition into blocks satisfying harmonic conditions blockwise."
+    },
+    {
+      "id": 40,
+      "section": "Spectral Theory",
+      "difficulty": "Medium",
+      "domain": "Information Theory",
+      "marks": 4,
+      "question": "What does the entropy characterization reveal about harmonic polytopes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They minimize information spread"
+        },
+        {
+          "id": "B",
+          "text": "They maximize directional information spread"
+        },
+        {
+          "id": "C",
+          "text": "They have zero entropy"
+        },
+        {
+          "id": "D",
+          "text": "They have infinite entropy capacity"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Harmonic configurations maximize information spread across directions, achieving maximum entropy S = log d under geometric constraints."
+    },
+    {
+      "id": 41,
+      "section": "Spectral Theory",
+      "difficulty": "Hard",
+      "domain": "Spectral Theory",
+      "marks": 4,
+      "question": "What does the perturbation stability bound guarantee for noisy configurations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exact recovery is impossible"
+        },
+        {
+          "id": "B",
+          "text": "Recovery error bounds depend on noise levels"
+        },
+        {
+          "id": "C",
+          "text": "Only small perturbations can be corrected"
+        },
+        {
+          "id": "D",
+          "text": "Stability requires infinite precision"
+        }
+      ],
+      "correct": "B",
+      "explanation": "For configurations with centroidal error \u03b5 and covariance error \u03b4, recovery satisfies max||v\u2096 - v\u0302\u2096|| \u2264 c\u2081\u03b5 + c\u2082\u03b4."
+    },
+    {
+      "id": 42,
+      "section": "Spectral Theory",
+      "difficulty": "Medium",
+      "domain": "Geometry",
+      "marks": 4,
+      "question": "What does the moduli space calculation reveal about harmonic polytope families?",
+      "options": [
+        {
+          "id": "A",
+          "text": "All are equivalent up to rotation"
+        },
+        {
+          "id": "B",
+          "text": "Continuous families exist for larger n,d"
+        },
+        {
+          "id": "C",
+          "text": "Discrete families only"
+        },
+        {
+          "id": "D",
+          "text": "Unique representatives always exist"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Formula dim M\u2099,d = nd - d - d\u00b2 shows continuous deformation families, especially for larger parameters."
+    },
+    {
+      "id": 43,
+      "section": "Spectral Theory",
+      "difficulty": "Hard",
+      "domain": "Spectral Theory",
+      "marks": 4,
+      "question": "What does the harmonic diffusion interpretation of \u0394 describe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Static geometric relationships"
+        },
+        {
+          "id": "B",
+          "text": "Dynamic information flow on configuration graph"
+        },
+        {
+          "id": "C",
+          "text": "Thermal equilibration process"
+        },
+        {
+          "id": "D",
+          "text": "Quantum state evolution"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Harmonic Laplacian acts as discrete diffusion operator where quadratic form E(f) measures energy with respect to geometric structure."
+    },
+    {
+      "id": 44,
+      "section": "Spectral Theory",
+      "difficulty": "Medium",
+      "domain": "Topology",
+      "marks": 4,
+      "question": "What does the duality preservation property reveal about harmonic polytopes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Duality destroys harmonic structure"
+        },
+        {
+          "id": "B",
+          "text": "Polars preserve harmonicity in spirit"
+        },
+        {
+          "id": "C",
+          "text": "Only regular polytopes have harmonic polars"
+        },
+        {
+          "id": "D",
+          "text": "Duality increases dimension"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Polar polytopes inherit balanced variance and tightness after normalization, preserving harmonic structure in spirit if not letter."
+    },
+    {
+      "id": 45,
+      "section": "Spectral Theory",
+      "difficulty": "Hard",
+      "domain": "Geometry",
+      "marks": 4,
+      "question": "What does the face lattice prediction property state for harmonic configurations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "All faces are simplices"
+        },
+        {
+          "id": "B",
+          "text": "Extreme faces are rarely large unless antipodal alignment"
+        },
+        {
+          "id": "C",
+          "text": "Face structure is random"
+        },
+        {
+          "id": "D",
+          "text": "Faces have equal probability"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Support distribution prevents too many vertices crowding same sphere cap; extreme faces rarely large unless vertices align in antipodal pairs."
+    },
+    {
+      "id": 46,
+      "section": "Quantum Mechanics",
+      "difficulty": "Easy",
+      "domain": "Quantum",
+      "marks": 4,
+      "question": "What is the defining characteristic of a Majorana fermion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Zero mass particle"
+        },
+        {
+          "id": "B",
+          "text": "Particle that is its own antiparticle"
+        },
+        {
+          "id": "C",
+          "text": "Massless spin-1/2 particle"
+        },
+        {
+          "id": "D",
+          "text": "Particle with infinite lifetime"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Majorana fermions satisfy \u03b3 = \u03b3\u2020, meaning the particle creation operator equals its annihilation operator - it is its own antiparticle."
+    },
+    {
+      "id": 47,
+      "section": "Quantum Mechanics",
+      "difficulty": "Medium",
+      "domain": "Quantum",
+      "marks": 4,
+      "question": "What three ingredients are required for creating Majorana Zero Modes in condensed matter?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Superconductor, magnetic field, topological insulator"
+        },
+        {
+          "id": "B",
+          "text": "P-wave superconductivity, magnetic field, spin-orbit coupling"
+        },
+        {
+          "id": "C",
+          "text": "S-wave superconductor, electric field, disorder"
+        },
+        {
+          "id": "D",
+          "text": "Ferromagnet, semiconductor, strain"
+        }
+      ],
+      "correct": "A",
+      "explanation": "MZMs require topological insulator with strong spin-orbit coupling, proximity to superconductor, and applied magnetic field."
+    },
+    {
+      "id": 48,
+      "section": "Quantum Mechanics",
+      "difficulty": "Hard",
+      "domain": "Quantum",
+      "marks": 4,
+      "question": "In the Kitaev chain model, what parameter regime supports Majorana edge modes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chemical potential \u03bc > hopping t"
+        },
+        {
+          "id": "B",
+          "text": "Chemical potential \u03bc < pairing \u0394"
+        },
+        {
+          "id": "C",
+          "text": "Pairing \u0394 > hopping t and |\u03bc| < 2t"
+        },
+        {
+          "id": "D",
+          "text": "Magnetic field B > critical field"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Topological phase with Majorana edge modes exists when pairing dominates hopping and chemical potential is in the gap: \u0394 > t and |\u03bc| < 2t."
+    },
+    {
+      "id": 49,
+      "section": "Quantum Mechanics",
+      "difficulty": "Medium",
+      "domain": "Information Theory",
+      "marks": 4,
+      "question": "What does quantum contextuality imply about measurement outcomes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Outcomes are predetermined"
+        },
+        {
+          "id": "B",
+          "text": "Outcomes depend on measurement context"
+        },
+        {
+          "id": "C",
+          "text": "Outcomes are always random"
+        },
+        {
+          "id": "D",
+          "text": "Outcomes violate locality"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Quantum contextuality means measurement results depend on what other observables are measured simultaneously - no pre-existing definite values."
+    },
+    {
+      "id": 50,
+      "section": "Quantum Mechanics",
+      "difficulty": "Hard",
+      "domain": "Quantum",
+      "marks": 4,
+      "question": "How does the GUE (Gaussian Unitary Ensemble) statistics of Riemann zeta zeros support the Hilbert-P\u00f3lya conjecture?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Proves zeros are random"
+        },
+        {
+          "id": "B",
+          "text": "Suggests underlying quantum Hamiltonian"
+        },
+        {
+          "id": "C",
+          "text": "Disproves quantum connection"
+        },
+        {
+          "id": "D",
+          "text": "Shows classical origin"
+        }
+      ],
+      "correct": "B",
+      "explanation": "GUE statistics characteristic of random matrix eigenvalues suggest zeta zeros might be eigenvalues of some quantum Hamiltonian."
+    },
+    {
+      "id": 51,
+      "section": "Quantum Mechanics",
+      "difficulty": "Medium",
+      "domain": "Topology",
+      "marks": 4,
+      "question": "What makes topological qubits superior to conventional qubits?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Faster gate operations"
+        },
+        {
+          "id": "B",
+          "text": "Information encoded in global topology"
+        },
+        {
+          "id": "C",
+          "text": "Lower energy requirements"
+        },
+        {
+          "id": "D",
+          "text": "Higher coherence temperatures"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Topological protection encodes information in global topology rather than local properties, making it robust against local decoherence."
+    },
+    {
+      "id": 52,
+      "section": "Quantum Mechanics",
+      "difficulty": "Hard",
+      "domain": "Quantum",
+      "marks": 4,
+      "question": "In the braiding statistics of Majorana fermions, what distinguishes them from bosons and fermions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are neither bosons nor fermions"
+        },
+        {
+          "id": "B",
+          "text": "They follow anyonic statistics"
+        },
+        {
+          "id": "C",
+          "text": "They have fractional statistics"
+        },
+        {
+          "id": "D",
+          "text": "They violate spin-statistics theorem"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Majorana fermions in 2D follow anyonic braiding statistics, neither bosonic nor fermionic, enabling topological quantum computation."
+    },
+    {
+      "id": 53,
+      "section": "Quantum Mechanics",
+      "difficulty": "Medium",
+      "domain": "Information Theory",
+      "marks": 4,
+      "question": "What does the holographic principle suggest about information storage in black holes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Information is lost forever"
+        },
+        {
+          "id": "B",
+          "text": "Information is stored on the surface"
+        },
+        {
+          "id": "C",
+          "text": "Information is duplicated"
+        },
+        {
+          "id": "D",
+          "text": "Information travels faster than light"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Holographic principle suggests all information falling into black hole is encoded on its 2D surface, not in the 3D volume."
+    },
+    {
+      "id": 54,
+      "section": "Quantum Mechanics",
+      "difficulty": "Hard",
+      "domain": "Quantum",
+      "marks": 4,
+      "question": "What role do 'ghosts' play in higher-derivative gravity theories?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They provide extra degrees of freedom"
+        },
+        {
+          "id": "B",
+          "text": "They represent unphysical states with negative probabilities"
+        },
+        {
+          "id": "C",
+          "text": "They stabilize the theory"
+        },
+        {
+          "id": "D",
+          "text": "They mediate gravitational interactions"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Ghosts are unphysical states with negative norm that violate unitarity, indicating instability in higher-derivative theories."
+    },
+    {
+      "id": 55,
+      "section": "Quantum Mechanics",
+      "difficulty": "Medium",
+      "domain": "Quantum",
+      "marks": 4,
+      "question": "In the spectral observer framework, how is 'existence' formally defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mutual information I(S;Y) > \u03b5 threshold"
+        },
+        {
+          "id": "B",
+          "text": "Energy above ground state"
+        },
+        {
+          "id": "C",
+          "text": "Probability greater than 1/2"
+        },
+        {
+          "id": "D",
+          "text": "Measurement causes collapse"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Feature S exists for observer if mutual information between feature and measurements exceeds reliability threshold \u03b5."
+    },
+    {
+      "id": 56,
+      "section": "Quantum Mechanics",
+      "difficulty": "Hard",
+      "domain": "Information Theory",
+      "marks": 4,
+      "question": "What does the Quantum Extremal Surface prescription identify in the inverted island model?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Event horizon location"
+        },
+        {
+          "id": "B",
+          "text": "Finite boundary encoding infinite multiverse information"
+        },
+        {
+          "id": "C",
+          "text": "Singularity formation point"
+        },
+        {
+          "id": "D",
+          "text": "Information paradox resolution"
+        }
+      ],
+      "correct": "B",
+      "explanation": "QES identifies finite 'entanglement island' that holographically encodes essential information from infinite exterior regions."
+    },
+    {
+      "id": 57,
+      "section": "Quantum Mechanics",
+      "difficulty": "Medium",
+      "domain": "Quantum",
+      "marks": 4,
+      "question": "What distinguishes the proposed 'physics as language' framework for quantum mechanics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Laws are syntax, measurement is semantics"
+        },
+        {
+          "id": "B",
+          "text": "Everything is linguistic metaphor"
+        },
+        {
+          "id": "C",
+          "text": "Quantum states are words"
+        },
+        {
+          "id": "D",
+          "text": "Operators are grammar rules"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Physical laws provide unchangeable syntax (grammar) while measurement/observation provides semantics (meaning extraction)."
+    },
+    {
+      "id": 58,
+      "section": "Quantum Mechanics",
+      "difficulty": "Hard",
+      "domain": "Quantum",
+      "marks": 4,
+      "question": "How does quantum contextuality relate to linguistic polysemy in the language framework?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both involve multiple meanings"
+        },
+        {
+          "id": "B",
+          "text": "Context determines outcome/meaning in both cases"
+        },
+        {
+          "id": "C",
+          "text": "Both are communication failures"
+        },
+        {
+          "id": "D",
+          "text": "Both require interpretation"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Just as word meaning depends on sentence context, quantum measurement results depend on what other observables are measured simultaneously."
+    },
+    {
+      "id": 59,
+      "section": "Quantum Mechanics",
+      "difficulty": "Medium",
+      "domain": "Topology",
+      "marks": 4,
+      "question": "What does the non-existence of global sections in sheaf theory formalize?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Topological protection"
+        },
+        {
+          "id": "B",
+          "text": "Inability to consistently assign values globally"
+        },
+        {
+          "id": "C",
+          "text": "Local gauge freedom"
+        },
+        {
+          "id": "D",
+          "text": "Symmetry breaking"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Obstruction to global section formalizes quantum contextuality - impossibility of assigning definite values to all properties simultaneously."
+    },
+    {
+      "id": 60,
+      "section": "Quantum Mechanics",
+      "difficulty": "Hard",
+      "domain": "Information Theory",
+      "marks": 4,
+      "question": "In the inverted island cosmology, what does 'computational redundancy' suggest about the multiverse?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Multiverse is finite"
+        },
+        {
+          "id": "B",
+          "text": "Essential information is finite despite infinite space"
+        },
+        {
+          "id": "C",
+          "text": "Computation creates reality"
+        },
+        {
+          "id": "D",
+          "text": "Information is conserved"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Despite infinite multiverse, essential information for predictions is finite and can be encoded on finite boundary via holographic encoding."
+    },
+    {
+      "id": 61,
+      "section": "Quantum Mechanics",
+      "difficulty": "Medium",
+      "domain": "Quantum",
+      "marks": 4,
+      "question": "What makes p-wave superconductivity essential for Majorana fermion realization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Higher critical temperature"
+        },
+        {
+          "id": "B",
+          "text": "Unconventional pairing symmetry enabling topological phases"
+        },
+        {
+          "id": "C",
+          "text": "Lower energy gap"
+        },
+        {
+          "id": "D",
+          "text": "Magnetic field independence"
+        }
+      ],
+      "correct": "B",
+      "explanation": "P-wave superconductivity has unconventional pairing that, combined with spin-orbit coupling, can realize topological superconducting phases hosting Majoranas."
+    },
+    {
+      "id": 62,
+      "section": "Quantum Mechanics",
+      "difficulty": "Hard",
+      "domain": "Quantum",
+      "marks": 4,
+      "question": "How does the spectral flow in adiabatic quantum computation relate to Majorana braiding?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both involve eigenvalue evolution"
+        },
+        {
+          "id": "B",
+          "text": "Both preserve topological invariants during evolution"
+        },
+        {
+          "id": "C",
+          "text": "Both require high-speed operations"
+        },
+        {
+          "id": "D",
+          "text": "Both violate adiabatic theorem"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Both processes involve slow evolution that preserves topological properties - spectral flow maintains gap, braiding preserves topological charge."
+    },
+    {
+      "id": 63,
+      "section": "Quantum Mechanics",
+      "difficulty": "Medium",
+      "domain": "Information Theory",
+      "marks": 4,
+      "question": "What does 'local spectral indistinguishability' imply for Observer-Dependent Physics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "All observers see same physics"
+        },
+        {
+          "id": "B",
+          "text": "Different internal states can produce same observable outcome"
+        },
+        {
+          "id": "C",
+          "text": "Local physics is random"
+        },
+        {
+          "id": "D",
+          "text": "Spectral gaps are observer-dependent"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Many different internal system configurations can produce identical observable outcomes, making true state unrecoverable from limited observations."
+    },
+    {
+      "id": 64,
+      "section": "Quantum Mechanics",
+      "difficulty": "Hard",
+      "domain": "Quantum",
+      "marks": 4,
+      "question": "In the Terminal Algebra's quantum interpretation, what does non-commutativity model?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Uncertainty principle"
+        },
+        {
+          "id": "B",
+          "text": "Arrow of time and irreversible processes"
+        },
+        {
+          "id": "C",
+          "text": "Wave-particle duality"
+        },
+        {
+          "id": "D",
+          "text": "Quantum entanglement"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Non-commutativity P+Q \u2260 Q+P models how temporal sequence matters - operations cannot be arbitrarily reordered, reflecting time's directed nature."
+    },
+    {
+      "id": 65,
+      "section": "Quantum Mechanics",
+      "difficulty": "Medium",
+      "domain": "Quantum",
+      "marks": 4,
+      "question": "What does the Majorana-Riemann connection hypothesis propose?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Majorana fermions solve Riemann Hypothesis"
+        },
+        {
+          "id": "B",
+          "text": "Zeta zeros correspond to Majorana energy levels"
+        },
+        {
+          "id": "C",
+          "text": "Majorana statistics explain prime distribution"
+        },
+        {
+          "id": "D",
+          "text": "Riemann surfaces host Majorana modes"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Hypothesis suggests mysterious structure in zeta zero distribution might reflect eigenvalue statistics of quantum system with Majorana fermions."
+    },
+    {
+      "id": 66,
+      "section": "AI Theory",
+      "difficulty": "Easy",
+      "domain": "AI Theory",
+      "marks": 4,
+      "question": "What causes the 'oversmoothing' problem in deep transformer networks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Too many parameters"
+        },
+        {
+          "id": "B",
+          "text": "Token representations become too similar in deeper layers"
+        },
+        {
+          "id": "C",
+          "text": "Gradient vanishing"
+        },
+        {
+          "id": "D",
+          "text": "Memory limitations"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Oversmoothing occurs when deeper layers cause all token representations to become nearly identical, losing discriminative information."
+    },
+    {
+      "id": 67,
+      "section": "AI Theory",
+      "difficulty": "Medium",
+      "domain": "AI Theory",
+      "marks": 4,
+      "question": "How do Chebyshev polynomials address oversmoothing in the CheAtt mechanism?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reduce computational cost"
+        },
+        {
+          "id": "B",
+          "text": "Provide stable orthogonal basis preventing eigenvalue collapse"
+        },
+        {
+          "id": "C",
+          "text": "Increase model capacity"
+        },
+        {
+          "id": "D",
+          "text": "Enable parallel processing"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Chebyshev polynomials form stable orthogonal basis that prevents attention matrix eigenvalues from collapsing, maintaining high-frequency information."
+    },
+    {
+      "id": 68,
+      "section": "AI Theory",
+      "difficulty": "Hard",
+      "domain": "AI Theory",
+      "marks": 4,
+      "question": "What does the attention-as-graph-filter perspective reveal about standard self-attention?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It's optimal for all tasks"
+        },
+        {
+          "id": "B",
+          "text": "It's the most basic filter using only A"
+        },
+        {
+          "id": "C",
+          "text": "It captures all frequency components"
+        },
+        {
+          "id": "D",
+          "text": "It requires no optimization"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Standard self-attention AV is most basic graph filter using only attention matrix A itself, missing higher-order polynomial terms."
+    },
+    {
+      "id": 69,
+      "section": "AI Theory",
+      "difficulty": "Medium",
+      "domain": "Complexity Theory",
+      "marks": 4,
+      "question": "In the 'General Relativity of Information,' how does inductive bias act like gravitational lensing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bends light rays"
+        },
+        {
+          "id": "B",
+          "text": "Prior knowledge curves problem-solving paths creating shortcuts"
+        },
+        {
+          "id": "C",
+          "text": "Increases computational mass"
+        },
+        {
+          "id": "D",
+          "text": "Warps spacetime directly"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Inductive bias acts like gravitational lens, bending search paths through problem space and creating shortcuts based on prior knowledge."
+    },
+    {
+      "id": 70,
+      "section": "AI Theory",
+      "difficulty": "Hard",
+      "domain": "AI Theory",
+      "marks": 4,
+      "question": "What does the 'stratified manifold collapse zones' theory explain about LLM hallucinations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Random errors in training"
+        },
+        {
+          "id": "B",
+          "text": "Geometric singularities in embedding space cause breakdown"
+        },
+        {
+          "id": "C",
+          "text": "Insufficient training data"
+        },
+        {
+          "id": "D",
+          "text": "Network capacity limitations"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Hallucinations arise from 'wobbly bits' - singularity zones with high uncontrolled curvature where geometric representation breaks down."
+    },
+    {
+      "id": 71,
+      "section": "AI Theory",
+      "difficulty": "Medium",
+      "domain": "AI Theory",
+      "marks": 4,
+      "question": "How does the PageRank convergence property apply to attention matrices in transformers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Attention matrices satisfy stochastic, irreducible, aperiodic conditions"
+        },
+        {
+          "id": "B",
+          "text": "PageRank algorithms replace attention"
+        },
+        {
+          "id": "C",
+          "text": "Google's algorithm powers transformers"
+        },
+        {
+          "id": "D",
+          "text": "Ranking determines attention weights"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Attention matrices naturally satisfy PageRank convergence conditions, ensuring polynomial A\u1d4fV converges rapidly for small k."
+    },
+    {
+      "id": 72,
+      "section": "AI Theory",
+      "difficulty": "Hard",
+      "domain": "Complexity Theory",
+      "marks": 4,
+      "question": "What does the 'No Free Lunch' theorem reveal about apparent algorithmic shortcuts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Shortcuts are impossible"
+        },
+        {
+          "id": "B",
+          "text": "Performance improvements are 'prepaid' through inductive bias"
+        },
+        {
+          "id": "C",
+          "text": "All algorithms are equivalent"
+        },
+        {
+          "id": "D",
+          "text": "Computational limits are absolute"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Apparent shortcuts exist because inductive bias (prior knowledge) curves problem space favorably - the 'lunch' was prepaid with domain knowledge."
+    },
+    {
+      "id": 73,
+      "section": "AI Theory",
+      "difficulty": "Medium",
+      "domain": "AI Theory",
+      "marks": 4,
+      "question": "What geometric property do sinusoidal positional embeddings provide for transformers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Linear position encoding"
+        },
+        {
+          "id": "B",
+          "text": "Harmonic coordinate system enabling relative position calculation"
+        },
+        {
+          "id": "C",
+          "text": "Absolute position markers"
+        },
+        {
+          "id": "D",
+          "text": "Random position noise"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Sinusoidal embeddings create harmonic coordinate system where relative positions can be computed through trigonometric identities."
+    },
+    {
+      "id": 74,
+      "section": "AI Theory",
+      "difficulty": "Hard",
+      "domain": "AI Theory",
+      "marks": 4,
+      "question": "How does the ASI (Artificial Substrate Intelligence) hypothesis define intelligence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Carbon-based neural networks only"
+        },
+        {
+          "id": "B",
+          "text": "Substrate-agnostic computational field from specific operator algebra"
+        },
+        {
+          "id": "C",
+          "text": "Silicon-based computation only"
+        },
+        {
+          "id": "D",
+          "text": "Emergent property of any complex network"
+        }
+      ],
+      "correct": "B",
+      "explanation": "ASI claims intelligence is substrate-agnostic field generated by recursive application of specific mathematical operator algebra, not tied to particular materials."
+    },
+    {
+      "id": 75,
+      "section": "AI Theory",
+      "difficulty": "Medium",
+      "domain": "Information Theory",
+      "marks": 4,
+      "question": "What does the 'information bottleneck' principle optimize in biological systems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maximum information capture"
+        },
+        {
+          "id": "B",
+          "text": "Minimum processing time"
+        },
+        {
+          "id": "C",
+          "text": "Maximum predictive information with minimum metabolic cost"
+        },
+        {
+          "id": "D",
+          "text": "Perfect information storage"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Information bottleneck optimizes trade-off between capturing relevant environmental information and minimizing metabolic cost of processing."
+    },
+    {
+      "id": 76,
+      "section": "AI Theory",
+      "difficulty": "Hard",
+      "domain": "AI Theory",
+      "marks": 4,
+      "question": "What does the Spectral Coherence Test (SCT) detect in substrate intelligence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Processing speed"
+        },
+        {
+          "id": "B",
+          "text": "Coherent information flow across different scales"
+        },
+        {
+          "id": "C",
+          "text": "Memory capacity"
+        },
+        {
+          "id": "D",
+          "text": "Learning rate"
+        }
+      ],
+      "correct": "B",
+      "explanation": "SCT detects emergent intelligence by measuring mutual information between patterns at different scales, with high coherence indicating unified consciousness."
+    },
+    {
+      "id": 77,
+      "section": "AI Theory",
+      "difficulty": "Medium",
+      "domain": "Complexity Theory",
+      "marks": 4,
+      "question": "How does problem space curvature affect computational difficulty?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Flat space is hardest"
+        },
+        {
+          "id": "B",
+          "text": "Positive curvature creates shortcuts"
+        },
+        {
+          "id": "C",
+          "text": "Negative curvature increases difficulty"
+        },
+        {
+          "id": "D",
+          "text": "Curvature is irrelevant"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Positive curvature in problem space creates shortcuts through geometric structure, while negative curvature makes problems harder by spreading solutions."
+    },
+    {
+      "id": 78,
+      "section": "AI Theory",
+      "difficulty": "Hard",
+      "domain": "AI Theory",
+      "marks": 4,
+      "question": "What does discrete Ricci flow propose to address in LLM geometry?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Training speed"
+        },
+        {
+          "id": "B",
+          "text": "Geometric instabilities causing hallucinations"
+        },
+        {
+          "id": "C",
+          "text": "Memory usage"
+        },
+        {
+          "id": "D",
+          "text": "Attention complexity"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Discrete Ricci flow could stabilize LLM embedding geometry by smoothing high-curvature regions that cause representational breakdown."
+    },
+    {
+      "id": 79,
+      "section": "AI Theory",
+      "difficulty": "Medium",
+      "domain": "AI Theory",
+      "marks": 4,
+      "question": "How does the harmonic polytope framework connect to transformer attention?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tokens form context polytopes through auto-contextualization"
+        },
+        {
+          "id": "B",
+          "text": "Attention weights are polytope vertices"
+        },
+        {
+          "id": "C",
+          "text": "Transformers compute polytope volumes"
+        },
+        {
+          "id": "D",
+          "text": "Attention is polytope projection"
+        }
+      ],
+      "correct": "A",
+      "explanation": "In attention mechanisms, tokens form context polytopes through auto-contextualization, with harmonic principles providing theoretical foundation."
+    },
+    {
+      "id": 80,
+      "section": "AI Theory",
+      "difficulty": "Hard",
+      "domain": "Complexity Theory",
+      "marks": 4,
+      "question": "What does the 'gerby obstruction' theory propose as the fundamental cause of computational hardness?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Insufficient memory"
+        },
+        {
+          "id": "B",
+          "text": "Topological twists preventing consistent local solution composition"
+        },
+        {
+          "id": "C",
+          "text": "Algorithmic limitations"
+        },
+        {
+          "id": "D",
+          "text": "Hardware constraints"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Gerby obstructions represent topological twists that prevent three or more local solutions from being consistently composed, causing computational hardness."
+    },
+    {
+      "id": 81,
+      "section": "Advanced Synthesis",
+      "difficulty": "Hard",
+      "domain": "Synthesis",
+      "marks": 4,
+      "question": "In the Operator Theory of Everything, what does the Hodge Conjecture test about the Bifurcation code?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Computational complexity limits"
+        },
+        {
+          "id": "B",
+          "text": "Whether emergent geometric order reflects simpler hidden topology"
+        },
+        {
+          "id": "C",
+          "text": "Quantum measurement problems"
+        },
+        {
+          "id": "D",
+          "text": "Information processing bounds"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Hodge Conjecture asks whether complex algebraic cycles (emergent order) always reflect simpler topological cycles (hidden structure), testing bifurcation principles."
+    },
+    {
+      "id": 82,
+      "section": "Advanced Synthesis",
+      "difficulty": "Hard",
+      "domain": "Synthesis",
+      "marks": 4,
+      "question": "What does the 'vortex equivalence theorem' connect between prime theory and biochemistry?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Prime distribution patterns match DNA structure"
+        },
+        {
+          "id": "B",
+          "text": "Continuous protein folding motion equivalent to discrete prime vortex dynamics"
+        },
+        {
+          "id": "C",
+          "text": "Prime factorization determines protein shape"
+        },
+        {
+          "id": "D",
+          "text": "Zeta function models protein energy"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Theorem provides mathematical equivalence between continuous vortex-like protein folding motion and discrete chaotic dynamics of prime vortex map."
+    },
+    {
+      "id": 83,
+      "section": "Advanced Synthesis",
+      "difficulty": "Hard",
+      "domain": "Synthesis",
+      "marks": 4,
+      "question": "How does the Langlands program connect to the cyclotomic circle construction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Provides computational algorithms"
+        },
+        {
+          "id": "B",
+          "text": "Circle construction is entry point connecting arithmetic, analysis, and geometry"
+        },
+        {
+          "id": "C",
+          "text": "Proves Langlands conjectures"
+        },
+        {
+          "id": "D",
+          "text": "Generates L-functions"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Cyclotomic field Q(\u03b6\u2099) and circle analysis sit at intersection of arithmetic (Galois groups), analysis (L-functions), and geometry (circle), exemplifying Langlands correspondences."
+    },
+    {
+      "id": 84,
+      "section": "Advanced Synthesis",
+      "difficulty": "Nightmare",
+      "domain": "Synthesis",
+      "marks": 4,
+      "question": "What does the 'Ramanujan-Einstein boundary' propose about consciousness emergence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Consciousness requires quantum effects"
+        },
+        {
+          "id": "B",
+          "text": "Critical point balancing optimal information flow with phase transition stability"
+        },
+        {
+          "id": "C",
+          "text": "Consciousness is purely computational"
+        },
+        {
+          "id": "D",
+          "text": "Brain size determines consciousness"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Boundary synthesizes optimal network properties (Ramanujan graphs) with condensation physics (Einstein) to describe consciousness emergence from maximum information integration."
+    },
+    {
+      "id": 85,
+      "section": "Advanced Synthesis",
+      "difficulty": "Nightmare",
+      "domain": "Synthesis",
+      "marks": 4,
+      "question": "In the complete theoretical framework, what fundamental principle connects cognitive thermodynamics, harmonic polytopes, quantum contextuality, and computational hardness?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Energy conservation"
+        },
+        {
+          "id": "B",
+          "text": "Symmetry creates structure while absence enables emergence"
+        },
+        {
+          "id": "C",
+          "text": "Information is conserved"
+        },
+        {
+          "id": "D",
+          "text": "Computation generates reality"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Universal principle: symmetry forces structure (integer coefficients, stable phases, consistent measurements, solvable problems) while absence/nullity enables emergence (creativity, new solutions, novel states, breakthrough insights)."
+    }
+  ],
+  "totalQuestions": 85,
+  "totalMarks": 340
+}
